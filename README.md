@@ -56,10 +56,11 @@ löschen (z. B. Parking-Seiten des Registrars).
 | AAAA  | `@`         | `2606:50c0:8001::153` | 3600 |
 | AAAA  | `@`         | `2606:50c0:8002::153` | 3600 |
 | AAAA  | `@`         | `2606:50c0:8003::153` | 3600 |
-| CNAME | `www`       | `<github-user>.github.io.` | 3600 |
+| CNAME | `www`       | `certoclavdevelopment-ux.github.io.` | 3600 |
 
-`<github-user>` ist der GitHub-Benutzer bzw. die Organisation, unter der dieses
-Repository liegt — **nicht** der Repository-Name.
+Der CNAME-Wert ist der GitHub-Account, unter dem dieses Repository liegt
+(`certoclavdevelopment-ux`) — **nicht** der Repository-Name. Wechselt der
+Account, muss dieser Eintrag mitwandern.
 
 E-Mail für info@certonis.com läuft unabhängig davon über die MX-Einträge von
 Microsoft 365. Diese bleiben unverändert; GitHub Pages betrifft nur A, AAAA und
