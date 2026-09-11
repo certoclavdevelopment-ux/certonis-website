@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="none" role="img" aria-label="Certonis">
+  <defs>
+    <linearGradient id="cg" x1="6" y1="42" x2="42" y2="6" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#6C4BF6"/>
+      <stop offset="0.55" stop-color="#8B5CF6"/>
+      <stop offset="1" stop-color="#22E3D2"/>
+    </linearGradient>
+  </defs>
+  <path d="M37.435 10.565 A19 19 0 1 0 37.435 37.435" stroke="url(#cg)" stroke-width="4.4"
+        stroke-dasharray="27 4.4 21 4.4 16 4.4 12.34" stroke-linecap="butt"/>
+  <path d="M31.07 16.93 A10 10 0 1 0 31.07 31.07" stroke="url(#cg)" stroke-width="4.4"
+        stroke-dasharray="16 4.4 12 4.4 10.32" stroke-linecap="butt" opacity="0.82"/>
+  <rect x="21.4" y="21.4" width="5.2" height="5.2" rx="1.2" fill="#22E3D2"/>
+</svg>

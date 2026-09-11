@@ -1,0 +1,927 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<script>document.documentElement.className += " js";</script>
+
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Certonis — Odoo ERP, eingerichtet von KI</title>
+<meta name="description" content="Certonis begleitet den Umstieg auf Odoo, das größte Open-Source-ERP der Welt. Datenanalyse, Einrichtung und Migration durch KI. Festpreis, 4–20 Wochen, Schulung inklusive.">
+<meta name="author" content="Certonis GmbH">
+<meta name="theme-color" content="#05060B">
+<link rel="canonical" href="https://certonis.com/">
+<meta name="robots" content="index, follow, max-image-preview:large">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Certonis">
+<meta property="og:locale" content="de_AT">
+<meta property="og:url" content="https://certonis.com/">
+<meta property="og:title" content="Certonis — Odoo ERP, eingerichtet von KI">
+<meta property="og:description" content="Der Umstieg auf Odoo: Datenanalyse, Einrichtung und Migration durch KI. Festpreis, 4–20 Wochen, Schulung inklusive.">
+<meta property="og:image" content="https://certonis.com/assets/img/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Certonis — Odoo ERP, eingerichtet von KI">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Certonis — Odoo ERP, eingerichtet von KI">
+<meta name="twitter:description" content="Der Umstieg auf Odoo: Datenanalyse, Einrichtung und Migration durch KI. Festpreis, 4–20 Wochen.">
+<meta name="twitter:image" content="https://certonis.com/assets/img/og.jpg">
+
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" href="/assets/icons/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/assets/icons/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+
+<link rel="preload" href="/assets/fonts/space-grotesk-var.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/inter-var.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/css/main.css">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://certonis.com/#org",
+      "name": "Certonis GmbH",
+      "url": "https://certonis.com/",
+      "logo": "https://certonis.com/assets/icons/icon-512.png",
+      "image": "https://certonis.com/assets/img/og.jpg",
+      "email": "info@certonis.com",
+      "description": "Certonis begleitet Unternehmen beim Umstieg auf das Open-Source-ERP Odoo. Datenanalyse, Einrichtung und Migration durch KI.",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Untergeng 29",
+        "postalCode": "4201",
+        "addressLocality": "Eidenberg",
+        "addressCountry": "AT"
+      },
+      "founder": { "@type": "Person", "name": "Michael Simon" },
+      "foundingDate": "2026-01-26",
+      "identifier": "FN 674951 a"
+    },
+    {
+      "@type": "ProfessionalService",
+      "@id": "https://certonis.com/#service",
+      "name": "Odoo ERP-Einführung durch KI",
+      "provider": { "@id": "https://certonis.com/#org" },
+      "areaServed": ["AT", "DE", "CH"],
+      "serviceType": "ERP-Implementierung, Odoo-Einführung, Datenmigration",
+      "url": "https://certonis.com/",
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Leistungen",
+        "itemListElement": [
+          { "@type": "Offer", "name": "Odoo Community Lizenz", "price": "0", "priceCurrency": "EUR",
+            "description": "0 € Lizenzkosten pro User und Monat" },
+          { "@type": "Offer", "name": "Odoo Enterprise Lizenz",
+            "description": "Abrechnung laut offizieller Odoo-Preisliste" },
+          { "@type": "Offer", "name": "Einrichtung durch Certonis",
+            "description": "Festpreis nach KI-gestützter Datenanalyse" }
+        ]
+      }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://certonis.com/#website",
+      "url": "https://certonis.com/",
+      "name": "Certonis",
+      "inLanguage": "de-AT",
+      "publisher": { "@id": "https://certonis.com/#org" }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        { "@type": "Question", "name": "Was kostet die Einrichtung?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Die Einrichtung wird als Festpreis angeboten. Die Höhe ergibt sich aus der KI-gestützten Datenanalyse und hängt von Modulanzahl, Datenmenge und Schnittstellen ab. Das Angebot erhalten Sie nach der Analyse — ohne Tagsätze und ohne Nachverrechnung im vereinbarten Umfang." } },
+        { "@type": "Question", "name": "Wie lange dauert ein Projekt?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Zwischen 4 und 20 Wochen, abhängig von Firmengröße, Modulumfang und Datenqualität. Kleine Betriebe mit wenigen Modulen starten oft nach 4 bis 6 Wochen produktiv." } },
+        { "@type": "Question", "name": "Was kostet Odoo selbst?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Odoo Community kostet 0 € pro User und Monat — es ist Open Source. Für Odoo Enterprise gilt die offizielle Preisliste von Odoo S.A." } },
+        { "@type": "Question", "name": "Wer arbeitet mit unseren Daten?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Vor jeder Datenübergabe werden eine Geheimhaltungsvereinbarung (NDA) und ein Auftragsverarbeitungsvertrag nach Art. 28 DSGVO unterzeichnet. Die Analyse läuft auf minimierten Datensätzen, Ihre Daten werden nicht zum Training von KI-Modellen verwendet." } },
+        { "@type": "Question", "name": "Was ist Claude Code?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Claude Code ist ein KI-Entwicklungswerkzeug von Anthropic. Certonis nutzt es, um Odoo-Konfiguration, Datenmigration und Anpassungen zu erzeugen und zu testen — geprüft und verantwortet von Menschen." } },
+        { "@type": "Question", "name": "Können bestehende Systeme migriert werden?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Ja. Übernommen werden typischerweise Stammdaten, offene Belege, Bestände, Buchhaltungssalden und Historien aus BMD, SAP Business One, Sage, Lexware, DATEV, Excel oder branchenspezifischer Software." } }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+
+<body>
+<a class="skip-link" href="#main" data-i18n="a11y.skip">Zum Inhalt springen</a>
+
+<div class="preloader" aria-hidden="true">
+  <div class="preloader__inner">
+    <img class="preloader__mark" src="/assets/icons/logo-mark.svg" alt="" width="54" height="54">
+    <div class="preloader__bar"><span></span></div>
+    <div class="preloader__pct">000</div>
+  </div>
+</div>
+
+<div class="atmosphere" aria-hidden="true"></div>
+<canvas id="gl-canvas" aria-hidden="true"></canvas>
+<div class="grain" aria-hidden="true"></div>
+<div class="scroll-progress" aria-hidden="true"></div>
+
+<!-- ============================================================ NAV ==== -->
+<header class="nav" id="nav">
+  <div class="nav__inner">
+    <a class="brand" href="/" aria-label="Certonis — Startseite">
+      <img class="brand__mark" src="/assets/icons/logo-mark.svg" alt="" width="34" height="34">
+      <span class="brand__word">CERTONIS</span>
+    </a>
+
+    <nav class="nav__links" aria-label="Hauptnavigation">
+      <a class="nav__link" href="#leistungen" data-i18n="nav.services">Leistungen</a>
+      <a class="nav__link" href="#ablauf" data-i18n="nav.process">Ablauf</a>
+      <a class="nav__link" href="#zeitplan" data-i18n="nav.timeline">Zeitplan</a>
+      <a class="nav__link" href="#preise" data-i18n="nav.pricing">Preise</a>
+      <a class="nav__link" href="#sicherheit" data-i18n="nav.security">Sicherheit</a>
+      <a class="nav__link" href="#faq" data-i18n="nav.faq">FAQ</a>
+    </nav>
+
+    <div class="nav__actions">
+      <div class="lang-switch" role="group" aria-label="Sprache / Language">
+        <button type="button" data-lang="de" aria-pressed="true">DE</button>
+        <button type="button" data-lang="en" aria-pressed="false">EN</button>
+      </div>
+      <span class="magnetic">
+        <a class="btn btn--primary btn--sm btn--arrow" href="#kontakt" data-booking>
+          <span data-i18n="cta.call">Discovery Call</span>
+          <svg class="btn__arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+      </span>
+      <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Menü öffnen">
+        <span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div class="mobile-menu" id="mobile-menu">
+  <nav class="mobile-menu__links" aria-label="Mobile Navigation">
+    <a href="#leistungen" style="--i:0"><span data-i18n="nav.services">Leistungen</span><i>01</i></a>
+    <a href="#ablauf" style="--i:1"><span data-i18n="nav.process">Ablauf</span><i>02</i></a>
+    <a href="#zeitplan" style="--i:2"><span data-i18n="nav.timeline">Zeitplan</span><i>03</i></a>
+    <a href="#preise" style="--i:3"><span data-i18n="nav.pricing">Preise</span><i>04</i></a>
+    <a href="#sicherheit" style="--i:4"><span data-i18n="nav.security">Sicherheit</span><i>05</i></a>
+    <a href="#faq" style="--i:5"><span data-i18n="nav.faq">FAQ</span><i>06</i></a>
+    <a href="#kontakt" style="--i:6"><span data-i18n="nav.contact">Kontakt</span><i>07</i></a>
+  </nav>
+  <div class="mobile-menu__foot">
+    <a href="mailto:info@certonis.com">info@certonis.com</a>
+    <span>Certonis GmbH · 4201 Eidenberg · Österreich</span>
+  </div>
+</div>
+
+<main id="main">
+
+<!-- =========================================================== HERO ==== -->
+<section class="hero" id="start">
+  <img class="hero__visual" src="/assets/img/hero-orb.webp" alt="" width="1000" height="1000"
+       loading="eager" fetchpriority="high" data-parallax="0.06">
+  <div class="shell hero__inner">
+    <div class="hero__badge reveal">
+      <span class="dot" aria-hidden="true"></span>
+      <span data-i18n="hero.badge">ERP-Einführung mit Claude Code</span>
+    </div>
+
+    <h1 class="hero__title" data-inview>
+      <span class="split-line" style="--i:0"><span data-i18n="hero.l1">Umstieg auf Odoo.</span></span>
+      <span class="split-line" style="--i:1"><span class="gradient-text" data-i18n="hero.l2">Eingerichtet von KI.</span></span>
+    </h1>
+
+    <p class="lead reveal" style="--d:220ms; margin-top:1.8rem;">
+      <span data-i18n="hero.lead">Certonis bringt Ihr Unternehmen auf das größte Open-Source-ERP der Welt. Prozessaufnahme, Datenanalyse, Konfiguration und Migration übernimmt KI — Sie bekommen einen Festpreis, einen klaren Zeitplan und ein System, das Ihre Abläufe wirklich abbildet.</span>
+    </p>
+
+    <p class="reveal" style="--d:320ms; margin-top:1rem; color:var(--text-faint); font-size:0.95rem;">
+      <span data-i18n="hero.for">Für</span>
+      <span class="hero__rotator" aria-hidden="true">
+        <span>Produktion</span><span>Handel</span><span>Dienstleistung</span><span>Handwerk</span><span>Großhandel</span>
+      </span>
+      <span data-i18n="hero.for2">— vom 5-Personen-Betrieb bis zum Mittelstand.</span>
+    </p>
+
+    <div class="hero__meta">
+      <div class="hero__ctas reveal" style="--d:420ms;">
+        <span class="magnetic">
+          <a class="btn btn--primary btn--lg btn--arrow" href="#kontakt" data-booking>
+            <span data-i18n="cta.callLong">Discovery Call vereinbaren</span>
+            <svg class="btn__arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+        </span>
+        <span class="magnetic">
+          <a class="btn btn--ghost btn--lg" href="#ablauf" data-i18n="cta.process">Ablauf ansehen</a>
+        </span>
+      </div>
+
+      <div class="hero__facts reveal" style="--d:520ms;">
+        <div class="fact">
+          <div class="fact__value"><span data-count="4" data-suffix="">4</span>–<span data-count="20">20</span></div>
+          <span class="fact__label" data-i18n="hero.f1">Wochen bis Go-live</span>
+        </div>
+        <div class="fact">
+          <div class="fact__value" data-count="0" data-suffix=" €">0 €</div>
+          <span class="fact__label" data-i18n="hero.f2">Lizenz pro User (Community)</span>
+        </div>
+        <div class="fact">
+          <div class="fact__value" data-count="6">6</div>
+          <span class="fact__label" data-i18n="hero.f3">Schritte im Ablauf</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="hero__scroll" aria-hidden="true">
+    <span class="hero__scroll-track"></span>
+    <span class="mono" data-i18n="hero.scroll">Scrollen</span>
+  </div>
+</section>
+
+<!-- ======================================================== MARQUEE ==== -->
+<div class="marquee" aria-hidden="true">
+  <div class="marquee__track">
+    <span class="marquee__item"><i>◇</i> CRM</span>
+    <span class="marquee__item"><i>◇</i> Verkauf</span>
+    <span class="marquee__item"><i>◇</i> Einkauf</span>
+    <span class="marquee__item"><i>◇</i> Lager</span>
+    <span class="marquee__item"><i>◇</i> Produktion</span>
+    <span class="marquee__item"><i>◇</i> Buchhaltung</span>
+    <span class="marquee__item"><i>◇</i> Personal</span>
+    <span class="marquee__item"><i>◇</i> Projekte</span>
+    <span class="marquee__item"><i>◇</i> Helpdesk</span>
+    <span class="marquee__item"><i>◇</i> Website &amp; Shop</span>
+    <span class="marquee__item"><i>◇</i> Wartung</span>
+    <span class="marquee__item"><i>◇</i> Qualität</span>
+    <span class="marquee__item"><i>◇</i> Dokumente</span>
+    <span class="marquee__item"><i>◇</i> Zeiterfassung</span>
+  </div>
+</div>
+
+<!-- ======================================================= MANIFEST ==== -->
+<section class="section" id="warum">
+  <div class="shell">
+    <div class="grid grid--2" style="align-items:start; gap:clamp(2rem,5vw,5rem);">
+      <div>
+        <span class="eyebrow reveal" data-i18n="manifest.eyebrow">Die Ausgangslage</span>
+        <p class="manifest" data-manifest="Software,Monate,um." data-i18n="manifest.text">Ein ERP-Projekt scheitert selten an der Software. Es scheitert an Monaten voller Workshops, Angeboten ohne Ende und Beratern, die Ihr Geschäft nicht kennen. Wir drehen das um.</p>
+      </div>
+      <div class="reveal" style="--d:160ms;">
+        <img src="/assets/img/flow-network.webp" alt="" width="1500" height="1000"
+             loading="lazy" style="border-radius:var(--r-lg); opacity:0.9; mix-blend-mode:screen;">
+        <div class="stats" style="margin-top:1.5rem; grid-template-columns:repeat(2,1fr);">
+          <div class="stat">
+            <div class="stat__value gradient-text"><span data-count="82" data-suffix=" %">82 %</span></div>
+            <div class="stat__label" data-i18n="manifest.s1">weniger Beratertage als im klassischen ERP-Projekt</div>
+          </div>
+          <div class="stat">
+            <div class="stat__value gradient-text"><span data-count="1" data-suffix=" Tag">1 Tag</span></div>
+            <div class="stat__label" data-i18n="manifest.s2">von der Datenübergabe zur ersten Analyse</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ====================================================== LEISTUNGEN === -->
+<section class="section" id="leistungen">
+  <div class="shell">
+    <div class="section-head">
+      <span class="eyebrow reveal" data-i18n="svc.eyebrow">Leistungen</span>
+      <h2 data-split data-i18n="svc.title">Alles, was zwischen Ihrem heutigen System und einem laufenden Odoo liegt.</h2>
+      <p class="lead reveal" style="--d:200ms;" data-i18n="svc.lead">Certonis übernimmt den gesamten Weg — von der ersten Prozessaufnahme bis zum Tag, an dem Ihr Team ohne Rückfragen arbeitet.</p>
+    </div>
+
+    <div class="bento">
+      <div class="card card--wide reveal">
+        <span class="card__num">01</span>
+        <div class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg></div>
+        <h3 data-i18n="svc.1t">Discovery &amp; Prozessaufnahme</h3>
+        <p data-i18n="svc.1d">Wir hören zu, bevor wir konfigurieren: Wie läuft ein Auftrag heute durch Ihr Haus? Wo entstehen Doppelerfassungen? Ergebnis ist eine Prozesslandkarte, die zur Grundlage jeder Entscheidung wird.</p>
+      </div>
+
+      <div class="card card--wide reveal" style="--d:80ms;">
+        <span class="card__num">02</span>
+        <div class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M4 7c0-1.7 3.6-3 8-3s8 1.3 8 3-3.6 3-8 3-8-1.3-8-3Z"/><path d="M4 7v10c0 1.7 3.6 3 8 3s8-1.3 8-3V7"/><path d="M4 12c0 1.7 3.6 3 8 3s8-1.3 8-3"/></svg></div>
+        <h3 data-i18n="svc.2t">Datenanalyse durch KI</h3>
+        <p data-i18n="svc.2d">Ihre Exporte aus BMD, SAP, Sage, DATEV, Lexware oder Excel werden automatisiert gelesen, bereinigt und auf das Odoo-Datenmodell gemappt. Dubletten, Lücken und Altlasten sehen Sie schwarz auf weiß — vor dem Angebot.</p>
+      </div>
+
+      <div class="card reveal">
+        <span class="card__num">03</span>
+        <div class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="m8 8-4 4 4 4M16 8l4 4-4 4M14 4l-4 16"/></svg></div>
+        <h3 data-i18n="svc.3t">Einrichtung mit Claude Code</h3>
+        <p data-i18n="svc.3d">Konfiguration, Felder, Workflows, Berichte und eigene Module entstehen KI-gestützt — versioniert, testbar und von uns geprüft.</p>
+      </div>
+
+      <div class="card reveal" style="--d:80ms;">
+        <span class="card__num">04</span>
+        <div class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 3v12"/><path d="m7 10 5 5 5-5"/><path d="M4 18v2h16v-2"/></svg></div>
+        <h3 data-i18n="svc.4t">Datenmigration</h3>
+        <p data-i18n="svc.4d">Stammdaten, offene Belege, Bestände, Salden und Historie wandern nachvollziehbar mit — mit Testlauf, Abgleich und Freigabe durch Sie.</p>
+      </div>
+
+      <div class="card reveal" style="--d:160ms;">
+        <span class="card__num">05</span>
+        <div class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="6" cy="6" r="2.5"/><circle cx="18" cy="18" r="2.5"/><path d="M6 8.5V15a3 3 0 0 0 3 3h6.5"/></svg></div>
+        <h3 data-i18n="svc.5t">Schnittstellen &amp; Automatisierung</h3>
+        <p data-i18n="svc.5d">Webshop, Bank, Versand, Zeiterfassung, Maschinen, Steuerberater: Was Daten liefert, wird angebunden statt abgetippt.</p>
+      </div>
+
+      <div class="card reveal" style="--d:240ms;">
+        <span class="card__num">06</span>
+        <div class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M3 7.5 12 4l9 3.5-9 3.5-9-3.5Z"/><path d="M7 10v5c0 1.4 2.2 2.5 5 2.5s5-1.1 5-2.5v-5"/></svg></div>
+        <h3 data-i18n="svc.6t">Schulung &amp; Hypercare</h3>
+        <p data-i18n="svc.6d">Rollenbezogene Schulungen, kurze Videos für den Alltag und eine begleitete Startphase, in der Fragen sofort beantwortet werden.</p>
+      </div>
+
+      <div class="card card--hero reveal" style="--d:120ms;">
+        <div>
+          <span class="card__num" data-i18n="svc.modules">Odoo-Module, die wir einrichten</span>
+          <div class="modules" style="margin-top:1.2rem;">
+            <span class="module-chip">CRM</span>
+            <span class="module-chip">Verkauf</span>
+            <span class="module-chip">Einkauf</span>
+            <span class="module-chip">Lager</span>
+            <span class="module-chip">Produktion (MRP)</span>
+            <span class="module-chip">Buchhaltung</span>
+            <span class="module-chip">Rechnungswesen AT/DE</span>
+            <span class="module-chip">Projekte</span>
+            <span class="module-chip">Zeiterfassung</span>
+            <span class="module-chip">Personal</span>
+            <span class="module-chip">Helpdesk</span>
+            <span class="module-chip">Website &amp; eCommerce</span>
+            <span class="module-chip">Point of Sale</span>
+            <span class="module-chip">Außendienst</span>
+            <span class="module-chip">Wartung</span>
+            <span class="module-chip">Qualität</span>
+            <span class="module-chip">Dokumente</span>
+            <span class="module-chip">Abonnements</span>
+          </div>
+        </div>
+        <p style="margin-top:2rem; max-width:60ch;" data-i18n="svc.modulesNote">Welche Module Sie wirklich brauchen, entscheidet die Datenanalyse — nicht der Verkauf. Ein schlankes Odoo, das gelebt wird, schlägt jede Vollausstattung im Leerlauf.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========================================================== ABLAUF === -->
+<section class="section flow" id="ablauf">
+  <div class="flow__viewport">
+    <div class="flow__head shell">
+      <span class="eyebrow" data-i18n="flow.eyebrow">Ablauf</span>
+      <h2 style="max-width:16ch;" data-i18n="flow.title">Sechs Schritte. Keine Überraschungen.</h2>
+    </div>
+
+    <div class="flow__rail">
+      <div class="flow__track">
+        <article class="flow__step">
+          <div class="flow__step-index">01</div>
+          <h3 data-i18n="flow.1t">Discovery Call</h3>
+          <p data-i18n="flow.1d">45 Minuten, kostenlos und unverbindlich. Wir klären, was Sie heute einsetzen, was weh tut und ob Odoo überhaupt die richtige Antwort ist. Wenn nicht, sagen wir das.</p>
+          <div class="flow__step-meta">
+            <span class="mono" data-i18n="flow.1m">45 Minuten</span>
+            <span class="mono accent" data-i18n="flow.free">kostenlos</span>
+          </div>
+        </article>
+
+        <article class="flow__step">
+          <div class="flow__step-index">02</div>
+          <h3 data-i18n="flow.2t">NDA &amp; Datenschutz</h3>
+          <p data-i18n="flow.2d">Bevor eine einzige Datei den Besitzer wechselt: Geheimhaltungsvereinbarung und Auftragsverarbeitungsvertrag nach Art. 28 DSGVO. Schriftlich, geprüft, beidseitig unterschrieben.</p>
+          <div class="flow__step-meta">
+            <span class="mono" data-i18n="flow.2m">1–3 Tage</span>
+            <span class="mono accent">NDA + AVV</span>
+          </div>
+        </article>
+
+        <article class="flow__step">
+          <div class="flow__step-index">03</div>
+          <h3 data-i18n="flow.3t">Datenanalyse durch AI</h3>
+          <p data-i18n="flow.3d">Ihre Exporte werden automatisiert analysiert: Datenqualität, Mengengerüst, Prozesslücken, Migrationsaufwand. Sie erhalten einen Bericht, der auch ohne uns Wert hat.</p>
+          <div class="flow__step-meta">
+            <span class="mono" data-i18n="flow.3m">1–2 Wochen</span>
+            <span class="mono accent" data-i18n="flow.report">Analysebericht</span>
+          </div>
+        </article>
+
+        <article class="flow__step">
+          <div class="flow__step-index">04</div>
+          <h3 data-i18n="flow.4t">Angebot zum Festpreis</h3>
+          <p data-i18n="flow.4d">Ein Preis, ein Umfang, ein Termin. Kein Tagsatz-Poker, keine Nachträge für Dinge, die vorher klar waren. Sie entscheiden auf Basis von Zahlen, nicht von Hoffnung.</p>
+          <div class="flow__step-meta">
+            <span class="mono" data-i18n="flow.4m">3–5 Tage</span>
+            <span class="mono accent" data-i18n="flow.fixed">Festpreis</span>
+          </div>
+        </article>
+
+        <article class="flow__step">
+          <div class="flow__step-index">05</div>
+          <h3 data-i18n="flow.5t">Einrichtung durch AI</h3>
+          <p data-i18n="flow.5d">Konfiguration, Migration, Anpassungen und Schnittstellen entstehen KI-gestützt in kurzen Zyklen. Sie sehen wöchentlich ein laufendes System, keine Präsentation.</p>
+          <div class="flow__step-meta">
+            <span class="mono" data-i18n="flow.5m">2–14 Wochen</span>
+            <span class="mono accent" data-i18n="flow.weekly">wöchentliche Demos</span>
+          </div>
+        </article>
+
+        <article class="flow__step">
+          <div class="flow__step-index">06</div>
+          <h3 data-i18n="flow.6t">Schulung &amp; Go-live</h3>
+          <p data-i18n="flow.6d">Ihr Team wird pro Rolle geschult, der Umstieg passiert an einem definierten Stichtag, und in den ersten Wochen danach sind wir eng dabei.</p>
+          <div class="flow__step-meta">
+            <span class="mono" data-i18n="flow.6m">1–3 Wochen</span>
+            <span class="mono accent">Hypercare</span>
+          </div>
+        </article>
+      </div>
+    </div>
+
+    <div class="flow__progress" aria-hidden="true"><span></span></div>
+  </div>
+</section>
+
+<!-- ======================================================== ZEITPLAN === -->
+<section class="section" id="zeitplan">
+  <div class="shell">
+    <div class="section-head">
+      <span class="eyebrow reveal" data-i18n="tl.eyebrow">Zeitplan</span>
+      <h2 data-split data-i18n="tl.title">4 bis 20 Wochen — je nach Firmengröße.</h2>
+      <p class="lead reveal" style="--d:180ms;" data-i18n="tl.lead">Ein 8-Personen-Dienstleister ist nach rund einem Monat produktiv. Ein produzierender Betrieb mit Lager, Fertigung und Schnittstellen braucht bis zu fünf Monate. Der Unterschied liegt im Umfang, nicht im Tempo.</p>
+    </div>
+
+    <div class="reveal" data-inview>
+      <div class="gantt">
+        <div class="gantt__row">
+          <span class="gantt__label" data-i18n="tl.r1">Discovery &amp; Prozessaufnahme</span>
+          <div class="gantt__track"><div class="gantt__bar" style="--start:0%; --len:10%;">1–2</div></div>
+        </div>
+        <div class="gantt__row">
+          <span class="gantt__label" data-i18n="tl.r2">NDA &amp; Datenschutz</span>
+          <div class="gantt__track"><div class="gantt__bar" style="--start:5%; --len:8%;">0,5</div></div>
+        </div>
+        <div class="gantt__row">
+          <span class="gantt__label" data-i18n="tl.r3">Datenanalyse durch AI</span>
+          <div class="gantt__track"><div class="gantt__bar" style="--start:10%; --len:14%;">1–2</div></div>
+        </div>
+        <div class="gantt__row">
+          <span class="gantt__label" data-i18n="tl.r4">Angebot &amp; Freigabe</span>
+          <div class="gantt__track"><div class="gantt__bar" style="--start:24%; --len:8%;">1</div></div>
+        </div>
+        <div class="gantt__row">
+          <span class="gantt__label" data-i18n="tl.r5">Einrichtung &amp; Migration</span>
+          <div class="gantt__track"><div class="gantt__bar" style="--start:32%; --len:53%;">2–14</div></div>
+        </div>
+        <div class="gantt__row">
+          <span class="gantt__label" data-i18n="tl.r6">Schulung, Go-live, Hypercare</span>
+          <div class="gantt__track"><div class="gantt__bar" style="--start:82%; --len:18%;">1–3</div></div>
+        </div>
+      </div>
+
+      <div class="gantt__scale" aria-hidden="true">
+        <span></span>
+        <div class="gantt__weeks">
+          <span>W0</span><span>W4</span><span>W8</span><span>W12</span><span>W16</span><span>W20</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="stats reveal" style="margin-top:3rem;">
+      <div class="stat">
+        <div class="stat__value gradient-text"><span data-count="4" data-suffix="–6">4–6</span></div>
+        <div class="stat__label" data-i18n="tl.s1">Wochen · Kleinbetrieb, 1–3 Module</div>
+      </div>
+      <div class="stat">
+        <div class="stat__value gradient-text"><span data-count="8" data-suffix="–12">8–12</span></div>
+        <div class="stat__label" data-i18n="tl.s2">Wochen · Handel &amp; Dienstleistung</div>
+      </div>
+      <div class="stat">
+        <div class="stat__value gradient-text"><span data-count="12" data-suffix="–20">12–20</span></div>
+        <div class="stat__label" data-i18n="tl.s3">Wochen · Produktion &amp; Mehrlager</div>
+      </div>
+      <div class="stat">
+        <div class="stat__value gradient-text"><span data-count="1" data-suffix=" Tag">1 Tag</span></div>
+        <div class="stat__label" data-i18n="tl.s4">Stichtag für den Umstieg</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================= KI ==== -->
+<section class="section" id="ki">
+  <div class="shell">
+    <div class="grid grid--2" style="align-items:center; gap:clamp(2.5rem,6vw,6rem);">
+      <div>
+        <span class="eyebrow reveal" data-i18n="ai.eyebrow">Warum KI</span>
+        <h2 data-split data-i18n="ai.title" style="margin-bottom:1.5rem;">Dieselbe Arbeit. Ein Bruchteil der Zeit.</h2>
+        <p class="lead reveal" style="--d:160ms;" data-i18n="ai.lead">Ein klassisches ERP-Projekt besteht zu großen Teilen aus Tätigkeiten, die kein Mensch mehr von Hand machen muss: Daten sichten, mappen, testen, dokumentieren. Genau diese Arbeit übernimmt bei uns KI — geprüft und verantwortet von Menschen.</p>
+
+        <div class="compare reveal" data-inview style="--d:240ms; margin-top:2.5rem;">
+          <div class="compare__row">
+            <div class="compare__head"><span data-i18n="ai.c1">Klassisches ERP-Projekt</span><span class="mono">9–18 <span data-i18n="ai.months">Monate</span></span></div>
+            <div class="compare__bar"><div class="compare__fill compare__fill--muted" style="--w:100%"></div></div>
+          </div>
+          <div class="compare__row">
+            <div class="compare__head"><span data-i18n="ai.c2">Certonis</span><span class="mono accent">1–5 <span data-i18n="ai.months">Monate</span></span></div>
+            <div class="compare__bar"><div class="compare__fill" style="--w:28%"></div></div>
+          </div>
+          <div class="compare__row">
+            <div class="compare__head"><span data-i18n="ai.c3">Beratertage klassisch</span><span class="mono">ca. 120</span></div>
+            <div class="compare__bar"><div class="compare__fill compare__fill--muted" style="--w:100%"></div></div>
+          </div>
+          <div class="compare__row">
+            <div class="compare__head"><span data-i18n="ai.c4">Beratertage bei Certonis</span><span class="mono accent">ca. 20</span></div>
+            <div class="compare__bar"><div class="compare__fill" style="--w:17%"></div></div>
+          </div>
+        </div>
+        <p class="mono" style="margin-top:1.5rem; color:var(--text-faint); text-transform:none; letter-spacing:0;" data-i18n="ai.note">Richtwerte aus vergleichbaren Mittelstandsprojekten. Ihr konkreter Umfang steht nach der Datenanalyse fest.</p>
+      </div>
+
+      <div class="reveal scale-in" style="--d:120ms;">
+        <img src="/assets/img/ai-core.webp" alt="" width="900" height="900" loading="lazy"
+             style="mix-blend-mode:screen; opacity:0.95;" data-parallax="0.05">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========================================================== PREISE === -->
+<section class="section" id="preise">
+  <div class="shell">
+    <div class="section-head section-head--center">
+      <span class="eyebrow eyebrow--center reveal" data-i18n="pr.eyebrow">Preise</span>
+      <h2 data-split data-i18n="pr.title">Transparent in drei Positionen.</h2>
+      <p class="lead reveal" style="--d:180ms;" data-i18n="pr.lead">Lizenz, Hosting und Einrichtung sind drei getrennte Dinge. Wir verdienen nur an der dritten — und sagen Ihnen vorher, was sie kostet.</p>
+    </div>
+
+    <div class="pricing">
+      <article class="price-card reveal">
+        <h3>Odoo Community</h3>
+        <p class="price-card__sub" data-i18n="pr.1s">Open Source. Der Standardweg für die meisten Betriebe.</p>
+        <div class="price-card__amount"><span>0 €</span><small data-i18n="pr.perUser">pro User / Monat</small></div>
+        <p class="price-card__note" data-i18n="pr.1n">Dauerhaft lizenzkostenfrei — unabhängig von der Anzahl der Benutzer.</p>
+        <ul>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="m5 13 4 4L19 7"/></svg><span data-i18n="pr.1f1">Alle Kernmodule: CRM, Verkauf, Einkauf, Lager, Projekte, Website</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="m5 13 4 4L19 7"/></svg><span data-i18n="pr.1f2">Unbegrenzte Benutzerzahl ohne Lizenzkosten</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="m5 13 4 4L19 7"/></svg><span data-i18n="pr.1f3">Betrieb bei einem EU-Hoster oder im eigenen Haus</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="m5 13 4 4L19 7"/></svg><span data-i18n="pr.1f4">Voller Zugriff auf Ihre Daten und den Quellcode</span></li>
+          <li class="is-muted"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M6 18 18 6M6 6l12 12"/></svg><span data-i18n="pr.1f5">Ohne Odoo Studio, Odoo-Support und Enterprise-Apps</span></li>
+        </ul>
+        <span class="magnetic"><a class="btn btn--ghost btn--block" href="#kontakt" data-i18n="pr.cta1">Passt das zu uns?</a></span>
+      </article>
+
+      <article class="price-card price-card--featured reveal" style="--d:100ms;">
+        <span class="price-card__tag" data-i18n="pr.tag">Unsere Leistung</span>
+        <h3 data-i18n="pr.2t">Einrichtung durch Certonis</h3>
+        <p class="price-card__sub" data-i18n="pr.2s">Analyse, Konfiguration, Migration, Schulung — als Paket.</p>
+        <div class="price-card__amount"><span data-i18n="pr.onRequest">Auf Anfrage</span></div>
+        <p class="price-card__note" data-i18n="pr.2n">Festpreis nach der Datenanalyse. Vorher unverbindlich, danach verbindlich.</p>
+        <ul>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="m5 13 4 4L19 7"/></svg><span data-i18n="pr.2f1">Discovery Call und Prozessaufnahme</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="m5 13 4 4L19 7"/></svg><span data-i18n="pr.2f2">KI-gestützte Datenanalyse inklusive Bericht</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="m5 13 4 4L19 7"/></svg><span data-i18n="pr.2f3">Konfiguration, Anpassungen und Schnittstellen</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="m5 13 4 4L19 7"/></svg><span data-i18n="pr.2f4">Datenmigration mit Testlauf und Abnahme</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="m5 13 4 4L19 7"/></svg><span data-i18n="pr.2f5">Rollenschulung und begleiteter Go-live</span></li>
+        </ul>
+        <span class="magnetic"><a class="btn btn--primary btn--block btn--arrow" href="#kontakt" data-booking>
+          <span data-i18n="pr.cta2">Angebot anfragen</span>
+          <svg class="btn__arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a></span>
+      </article>
+
+      <article class="price-card reveal" style="--d:200ms;">
+        <h3>Odoo Enterprise</h3>
+        <p class="price-card__sub" data-i18n="pr.3s">Wenn Studio, Hersteller-Support und Enterprise-Apps gebraucht werden.</p>
+        <div class="price-card__amount"><span data-i18n="pr.3p">Odoo-Preise</span></div>
+        <p class="price-card__note" data-i18n="pr.3n">Abrechnung direkt über Odoo S.A. laut offizieller Preisliste.</p>
+        <ul>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="m5 13 4 4L19 7"/></svg><span data-i18n="pr.3f1">Alle Community-Funktionen plus Enterprise-Apps</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="m5 13 4 4L19 7"/></svg><span data-i18n="pr.3f2">Odoo Studio, mobile Apps, IoT, Buchhaltung Enterprise</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="m5 13 4 4L19 7"/></svg><span data-i18n="pr.3f3">Support und Upgrades durch den Hersteller</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="m5 13 4 4L19 7"/></svg><span data-i18n="pr.3f4">Hosting auf Odoo Online oder odoo.sh</span></li>
+        </ul>
+        <span class="magnetic"><a class="btn btn--ghost btn--block" href="https://www.odoo.com/de_DE/pricing" target="_blank" rel="noopener">
+          <span data-i18n="pr.cta3">Odoo-Preisliste</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg>
+        </a></span>
+      </article>
+    </div>
+
+    <p class="reveal" style="margin-top:1.5rem; font-size:0.82rem; color:var(--text-faint); text-align:center;" data-i18n="pr.disclaimer">Alle Preise exkl. USt. Hosting-, Lizenz- und Drittanbieterkosten werden direkt beim jeweiligen Anbieter abgerechnet. Certonis ist ein unabhängiges Unternehmen und steht in keinem Naheverhältnis zu Odoo S.A. oder Anthropic.</p>
+  </div>
+</section>
+
+<!-- ===================================================== SICHERHEIT ==== -->
+<section class="section" id="sicherheit">
+  <div class="shell">
+    <div class="section-head">
+      <span class="eyebrow reveal" data-i18n="sec.eyebrow">Sicherheit &amp; Datenschutz</span>
+      <h2 data-split data-i18n="sec.title">Ihre Daten bleiben Ihre Daten.</h2>
+    </div>
+
+    <div class="grid grid--3">
+      <div class="card reveal">
+        <div class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 3 5 6v6c0 4.2 2.9 7.7 7 9 4.1-1.3 7-4.8 7-9V6l-7-3Z"/></svg></div>
+        <h3 data-i18n="sec.1t">NDA vor allem anderen</h3>
+        <p data-i18n="sec.1d">Die Geheimhaltungsvereinbarung wird unterschrieben, bevor Sie uns die erste Datei zeigen. Beidseitig, unbefristet für Geschäftsgeheimnisse.</p>
+      </div>
+      <div class="card reveal" style="--d:80ms;">
+        <div class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="4" y="10" width="16" height="10" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg></div>
+        <h3 data-i18n="sec.2t">AVV nach Art. 28 DSGVO</h3>
+        <p data-i18n="sec.2d">Auftragsverarbeitungsvertrag mit dokumentierten technischen und organisatorischen Maßnahmen, Subauftragnehmern und Löschfristen.</p>
+      </div>
+      <div class="card reveal" style="--d:160ms;">
+        <div class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.7 2.5 15.3 0 18M12 3C9.5 5.7 9.5 18.3 12 21"/></svg></div>
+        <h3 data-i18n="sec.3t">Verarbeitung in der EU</h3>
+        <p data-i18n="sec.3d">Produktivsysteme und Backups laufen bei EU-Anbietern. Wo Drittlandtransfer nötig wäre, sagen wir es vorher — oder lassen es.</p>
+      </div>
+      <div class="card reveal" style="--d:40ms;">
+        <div class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M4 6h16M4 12h10M4 18h6"/></svg></div>
+        <h3 data-i18n="sec.4t">Datenminimierung</h3>
+        <p data-i18n="sec.4d">Für die Analyse brauchen wir Strukturen und Mengen, selten Klarnamen. Wo pseudonymisiert werden kann, wird pseudonymisiert.</p>
+      </div>
+      <div class="card reveal" style="--d:120ms;">
+        <div class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 3v18M3 12h18" /><circle cx="12" cy="12" r="9"/></svg></div>
+        <h3 data-i18n="sec.5t">Kein KI-Training mit Ihren Daten</h3>
+        <p data-i18n="sec.5d">Ihre Inhalte werden ausschließlich für Ihr Projekt verwendet und nicht zum Training von Modellen freigegeben.</p>
+      </div>
+      <div class="card reveal" style="--d:200ms;">
+        <div class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M5 7h14v13H5zM9 7V4h6v3"/><path d="m9 13 2 2 4-4"/></svg></div>
+        <h3 data-i18n="sec.6t">Alles bleibt exportierbar</h3>
+        <p data-i18n="sec.6d">Odoo läuft auf PostgreSQL, der Quellcode ist offen. Sie können jederzeit alles exportieren — auch von uns weg.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================= FAQ === -->
+<section class="section" id="faq">
+  <div class="shell">
+    <div class="grid grid--2" style="gap:clamp(2rem,5vw,5rem); align-items:start;">
+      <div>
+        <span class="eyebrow reveal" data-i18n="faq.eyebrow">FAQ</span>
+        <h2 data-split data-i18n="faq.title" style="max-width:14ch;">Fragen, die vor jedem Projekt kommen.</h2>
+        <p class="lead reveal" style="--d:160ms; margin-top:1.5rem;" data-i18n="faq.lead">Steht Ihre Frage nicht dabei? Schreiben Sie uns — wir antworten innerhalb eines Werktags.</p>
+        <span class="magnetic"><a class="link-arrow" href="mailto:info@certonis.com" style="margin-top:1.5rem;">info@certonis.com
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7M9 7h8v8"/></svg></a></span>
+      </div>
+
+      <div class="accordion reveal">
+        <div class="acc__item">
+          <button class="acc__trigger" type="button" aria-expanded="false">
+            <span data-i18n="faq.q1">Was kostet die Einrichtung?</span>
+            <span class="acc__icon" aria-hidden="true"></span>
+          </button>
+          <div class="acc__panel"><div><p data-i18n="faq.a1">Die Einrichtung wird als Festpreis angeboten. Die Höhe ergibt sich aus der Datenanalyse und hängt von Modulanzahl, Datenmenge, Schnittstellen und Schulungsumfang ab. Sie bekommen das Angebot nach der Analyse — ohne Tagsätze und ohne Nachverrechnung im vereinbarten Umfang.</p></div></div>
+        </div>
+        <div class="acc__item">
+          <button class="acc__trigger" type="button" aria-expanded="false">
+            <span data-i18n="faq.q2">Warum ist Odoo Community 0 €?</span>
+            <span class="acc__icon" aria-hidden="true"></span>
+          </button>
+          <div class="acc__panel"><div><p data-i18n="faq.a2">Weil Odoo Community Open Source ist (LGPLv3). Es fallen keine Lizenzgebühren pro Benutzer an, egal wie viele Personen damit arbeiten. Kosten entstehen nur für Hosting, Einrichtung und optional Enterprise-Funktionen.</p></div></div>
+        </div>
+        <div class="acc__item">
+          <button class="acc__trigger" type="button" aria-expanded="false">
+            <span data-i18n="faq.q3">Was genau macht die KI — und was der Mensch?</span>
+            <span class="acc__icon" aria-hidden="true"></span>
+          </button>
+          <div class="acc__panel"><div><p data-i18n="faq.a3">Die KI übernimmt die fleißige Arbeit: Daten sichten, mappen, Konfiguration und Anpassungen erzeugen, Tests schreiben, dokumentieren. Menschen entscheiden über Prozesse, prüfen jedes Ergebnis, verantworten die Abnahme und führen die Schulung durch.</p></div></div>
+        </div>
+        <div class="acc__item">
+          <button class="acc__trigger" type="button" aria-expanded="false">
+            <span data-i18n="faq.q4">Können unsere Altdaten übernommen werden?</span>
+            <span class="acc__icon" aria-hidden="true"></span>
+          </button>
+          <div class="acc__panel"><div><p data-i18n="faq.a4">In aller Regel ja. Übernommen werden typischerweise Kunden, Lieferanten, Artikel, Stücklisten, offene Belege, Bestände, Buchhaltungssalden und Historien — aus BMD, SAP Business One, Sage, Lexware, DATEV, Excel oder Branchensoftware. Was übernommen wird, entscheiden Sie nach dem Analysebericht.</p></div></div>
+        </div>
+        <div class="acc__item">
+          <button class="acc__trigger" type="button" aria-expanded="false">
+            <span data-i18n="faq.q5">Wo läuft unser Odoo?</span>
+            <span class="acc__icon" aria-hidden="true"></span>
+          </button>
+          <div class="acc__panel"><div><p data-i18n="faq.a5">Wahlweise bei einem EU-Hoster, auf odoo.sh, auf Odoo Online oder auf Ihrem eigenen Server. Wir empfehlen abhängig von Datenschutzanforderungen, IT-Ressourcen und Budget — die Entscheidung bleibt bei Ihnen.</p></div></div>
+        </div>
+        <div class="acc__item">
+          <button class="acc__trigger" type="button" aria-expanded="false">
+            <span data-i18n="faq.q6">Was passiert nach dem Go-live?</span>
+            <span class="acc__icon" aria-hidden="true"></span>
+          </button>
+          <div class="acc__panel"><div><p data-i18n="faq.a6">Auf den Go-live folgt eine Hypercare-Phase mit kurzen Reaktionszeiten. Danach können Sie selbstständig weiterarbeiten, Änderungen einzeln beauftragen oder eine laufende Betreuung vereinbaren. Ein Lock-in ist technisch nicht möglich: Sie besitzen Daten und System.</p></div></div>
+        </div>
+        <div class="acc__item">
+          <button class="acc__trigger" type="button" aria-expanded="false">
+            <span data-i18n="faq.q7">Sind Sie ein offizieller Odoo-Partner?</span>
+            <span class="acc__icon" aria-hidden="true"></span>
+          </button>
+          <div class="acc__panel"><div><p data-i18n="faq.a7">Certonis ist ein unabhängiges österreichisches Unternehmen und arbeitet mit Odoo als Produkt. Enterprise-Lizenzen rechnen Sie direkt mit Odoo S.A. ab — dadurch bleiben unsere Empfehlungen frei von Lizenzprovisionen.</p></div></div>
+        </div>
+        <div class="acc__item">
+          <button class="acc__trigger" type="button" aria-expanded="false">
+            <span data-i18n="faq.q8">Und wenn Odoo nicht passt?</span>
+            <span class="acc__icon" aria-hidden="true"></span>
+          </button>
+          <div class="acc__panel"><div><p data-i18n="faq.a8">Dann sagen wir das im Discovery Call. Es gibt Branchen und Anforderungen, für die spezialisierte Software die bessere Antwort ist. Ein Projekt, das nicht passt, kostet beide Seiten mehr, als es bringt.</p></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========================================================= KONTAKT === -->
+<section class="section" id="kontakt">
+  <div class="shell">
+    <div class="contact-grid">
+      <div class="contact-aside">
+        <span class="eyebrow reveal" data-i18n="ct.eyebrow">Kontakt</span>
+        <h2 data-split data-i18n="ct.title">Starten wir mit 45 Minuten.</h2>
+        <p class="lead reveal" style="--d:160ms; margin-top:1.5rem;" data-i18n="ct.lead">Erzählen Sie uns kurz, wo Sie stehen. Im Discovery Call klären wir gemeinsam, ob und wie Odoo für Sie funktioniert — ohne Präsentation und ohne Verkaufsdruck.</p>
+
+        <ul class="reveal" style="--d:240ms;">
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+            <div><strong>E-Mail</strong><span><a href="mailto:info@certonis.com">info@certonis.com</a></span></div>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 21s7-5.6 7-11a7 7 0 1 0-14 0c0 5.4 7 11 7 11Z"/><circle cx="12" cy="10" r="2.5"/></svg>
+            <div><strong>Certonis GmbH</strong><span>Untergeng 29, 4201 Eidenberg, Österreich</span></div>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+            <div><strong data-i18n="ct.response">Antwortzeit</strong><span data-i18n="ct.responseVal">Innerhalb eines Werktags, meist schneller.</span></div>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 3 5 6v6c0 4.2 2.9 7.7 7 9 4.1-1.3 7-4.8 7-9V6l-7-3Z"/></svg>
+            <div><strong data-i18n="ct.nda">Vertraulich</strong><span data-i18n="ct.ndaVal">Auf Wunsch unterschreiben wir das NDA vor dem ersten Gespräch.</span></div>
+          </li>
+        </ul>
+      </div>
+
+      <form class="form reveal" id="contact-form" novalidate style="--d:120ms;">
+        <div class="form__grid">
+          <div class="field">
+            <label for="f-name"><span data-i18n="form.name">Name</span> <span class="req">*</span></label>
+            <input id="f-name" name="name" type="text" autocomplete="name" required placeholder="Maria Muster">
+            <span class="field__error"></span>
+          </div>
+          <div class="field">
+            <label for="f-company"><span data-i18n="form.company">Firma</span> <span class="req">*</span></label>
+            <input id="f-company" name="company" type="text" autocomplete="organization" required placeholder="Muster GmbH">
+            <span class="field__error"></span>
+          </div>
+          <div class="field">
+            <label for="f-email"><span data-i18n="form.email">E-Mail</span> <span class="req">*</span></label>
+            <input id="f-email" name="email" type="email" autocomplete="email" required placeholder="maria@muster.at">
+            <span class="field__error"></span>
+          </div>
+          <div class="field">
+            <label for="f-phone" data-i18n="form.phone">Telefon</label>
+            <input id="f-phone" name="phone" type="tel" autocomplete="tel" placeholder="+43 …">
+            <span class="field__error"></span>
+          </div>
+          <div class="field">
+            <label for="f-employees" data-i18n="form.employees">Mitarbeiter</label>
+            <select id="f-employees" name="employees">
+              <option value="">—</option>
+              <option>1–9</option>
+              <option>10–29</option>
+              <option>30–99</option>
+              <option>100–249</option>
+              <option>250+</option>
+            </select>
+            <span class="field__error"></span>
+          </div>
+          <div class="field">
+            <label for="f-system" data-i18n="form.system">Aktuelles System</label>
+            <input id="f-system" name="current_system" type="text" placeholder="BMD, SAP, Excel …">
+            <span class="field__error"></span>
+          </div>
+          <div class="field field--full">
+            <label for="f-timeline" data-i18n="form.timeline">Gewünschter Start</label>
+            <select id="f-timeline" name="timeline">
+              <option value="" data-i18n="form.t0">Noch offen</option>
+              <option data-i18n="form.t1">So bald wie möglich</option>
+              <option data-i18n="form.t2">In 1–3 Monaten</option>
+              <option data-i18n="form.t3">In 3–6 Monaten</option>
+              <option data-i18n="form.t4">Wir sammeln erst Informationen</option>
+            </select>
+            <span class="field__error"></span>
+          </div>
+          <div class="field field--full">
+            <label for="f-message"><span data-i18n="form.message">Worum geht es?</span> <span class="req">*</span></label>
+            <textarea id="f-message" name="message" required data-i18n-ph="form.messagePh" placeholder="Wir arbeiten heute mit … und stoßen bei … an Grenzen."></textarea>
+            <span class="field__error"></span>
+          </div>
+        </div>
+
+        <input class="honeypot" type="text" name="_hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+        <div class="form__foot">
+          <label class="checkbox">
+            <input type="checkbox" name="consent" required>
+            <span data-i18n="form.consent">Ich habe die <a href="/datenschutz.html">Datenschutzerklärung</a> gelesen und bin einverstanden, dass meine Angaben zur Bearbeitung der Anfrage gespeichert werden.</span>
+          </label>
+          <span class="field__error"></span>
+
+          <div id="form-status" class="form__status" aria-live="polite"></div>
+
+          <span class="magnetic">
+            <button class="btn btn--primary btn--lg btn--block" type="submit">
+              <span class="btn__label" data-i18n="form.submit">Anfrage senden</span>
+              <span class="spinner" aria-hidden="true"></span>
+            </button>
+          </span>
+          <p style="font-size:0.78rem; color:var(--text-faint);" data-i18n="form.note">Keine Newsletter, keine Weitergabe an Dritte. Ihre Angaben dienen ausschließlich der Beantwortung dieser Anfrage.</p>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================= CTA === -->
+<section class="section section--tight">
+  <div class="shell">
+    <div class="cta-band reveal scale-in">
+      <span class="eyebrow eyebrow--center" style="justify-content:center;" data-i18n="cta.eyebrow">Nächster Schritt</span>
+      <h2 data-i18n="cta.title">Reden wir über Ihre Prozesse, nicht über Software.</h2>
+      <p class="lead" data-i18n="cta.lead">45 Minuten, kostenlos, ohne Verpflichtung. Danach wissen Sie, ob sich der Umstieg für Sie rechnet.</p>
+      <div class="cta-band__actions">
+        <span class="magnetic">
+          <a class="btn btn--primary btn--lg btn--arrow" href="#kontakt" data-booking>
+            <span data-i18n="cta.callLong">Discovery Call vereinbaren</span>
+            <svg class="btn__arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+        </span>
+        <span class="magnetic">
+          <a class="btn btn--ghost btn--lg" href="mailto:info@certonis.com">info@certonis.com</a>
+        </span>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ========================================================== FOOTER === -->
+<footer class="footer">
+  <div class="shell">
+    <div class="footer__grid">
+      <div class="footer__brand">
+        <a class="brand" href="/">
+          <img class="brand__mark" src="/assets/icons/logo-mark.svg" alt="" width="34" height="34">
+          <span class="brand__word">CERTONIS</span>
+        </a>
+        <p data-i18n="footer.tagline">Certonis begleitet Unternehmen beim Umstieg auf Odoo — mit KI für die Fleißarbeit und Menschen für die Entscheidungen.</p>
+      </div>
+
+      <div class="footer__col">
+        <h4 data-i18n="footer.nav">Navigation</h4>
+        <ul>
+          <li><a href="#leistungen" data-i18n="nav.services">Leistungen</a></li>
+          <li><a href="#ablauf" data-i18n="nav.process">Ablauf</a></li>
+          <li><a href="#zeitplan" data-i18n="nav.timeline">Zeitplan</a></li>
+          <li><a href="#preise" data-i18n="nav.pricing">Preise</a></li>
+          <li><a href="#faq" data-i18n="nav.faq">FAQ</a></li>
+        </ul>
+      </div>
+
+      <div class="footer__col">
+        <h4 data-i18n="footer.legal">Rechtliches</h4>
+        <ul>
+          <li><a href="/impressum.html" data-i18n="footer.imprint">Impressum</a></li>
+          <li><a href="/datenschutz.html" data-i18n="footer.privacy">Datenschutz</a></li>
+          <li><a href="/agb.html" data-i18n="footer.terms">AGB</a></li>
+        </ul>
+      </div>
+
+      <div class="footer__col">
+        <h4 data-i18n="footer.contact">Kontakt</h4>
+        <ul>
+          <li><a href="mailto:info@certonis.com">info@certonis.com</a></li>
+          <li><span style="color:var(--text-dim); font-size:0.92rem;">Untergeng 29<br>4201 Eidenberg<br>Österreich</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer__wordmark" aria-hidden="true">CERTONIS</div>
+
+    <div class="footer__bottom">
+      <span>© <span data-year>2026</span> Certonis GmbH · FN 674951 a · Landesgericht Linz</span>
+      <span data-i18n="footer.built">Gebaut mit Claude Code.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="/js/config.js" defer></script>
+<script src="/js/i18n.js" defer></script>
+<script src="/js/app.js" defer></script>
+<script src="/js/form.js" defer></script>
+<script src="/js/gl.js" defer></script>
+</body>
+</html>

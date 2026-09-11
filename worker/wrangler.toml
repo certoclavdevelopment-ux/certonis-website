@@ -1,0 +1,12 @@
+name = "certonis-contact"
+main = "src/index.js"
+compatibility_date = "2026-09-01"
+
+[vars]
+MAILBOX = "info@certonis.com"
+ALLOWED_ORIGINS = "https://certonis.com,https://www.certonis.com"
+
+# Secrets are NOT stored here. Set them once with:
+#   npx wrangler secret put MS_TENANT_ID
+#   npx wrangler secret put MS_CLIENT_ID
+#   npx wrangler secret put MS_CLIENT_SECRET
