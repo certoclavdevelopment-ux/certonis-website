@@ -9,27 +9,70 @@ Keine Frameworks, keine Tracker, keine Cookies. Schriften liegen lokal im Repo
 
 ## Struktur
 
+Die HTML-Dateien im Wurzelverzeichnis werden **erzeugt**. Bearbeitet wird
+ausschließlich `src/`, danach `node build.js`.
+
 ```
-index.html            Startseite (alle Sektionen)
-impressum.html        Impressum (§ 5 ECG, § 14 UGB, MedienG)
-datenschutz.html      Datenschutzerklärung
-agb.html              AGB (Entwurf — bitte anwaltlich prüfen lassen)
-404.html              Fehlerseite
+src/layout.html        HTML-Gerüst (head, Meta, Skripte)
+src/partials/nav.html  Navigation und mobiles Menü
+src/partials/footer.html
+src/sections/*.html    Die Inhaltsbausteine (hero, preise, faq, …)
+src/pages/*.html       Ganzseiten-Inhalte (Impressum, Datenschutz, AGB, 404)
+build.js               Setzt daraus die Seiten und die sitemap.xml zusammen
 
-css/main.css          Komplettes Designsystem
-js/config.js          ► Einstellungen: Kontakt-Endpoint, E-Mail, Buchungslink
-js/i18n.js            Sprachumschaltung DE/EN
-js/app.js             Scroll-, Reveal- und Interaktions-Engine
-js/form.js            Kontaktformular
-js/gl.js              WebGL-Hintergrund (Shader)
+index.html             Startseite — kurz, mit Kacheln zu den Unterseiten
+leistungen.html        Leistungen + Odoo-Module
+ablauf.html            Sechs Schritte + Zeitplan
+ki.html                Warum KI + Ausgangslage
+preise.html            Preise
+sicherheit.html        Sicherheit & Datenschutz
+faq.html               Häufige Fragen
+kontakt.html           Kontaktformular
+impressum.html         Impressum (§ 5 ECG, § 14 UGB, MedienG)
+datenschutz.html       Datenschutzerklärung
+agb.html               AGB (Entwurf — bitte anwaltlich prüfen lassen)
+404.html               Fehlerseite
 
-assets/fonts/         Inter + Space Grotesk (variable woff2, selbst gehostet)
-assets/img/           Bildwelt (mit generativer KI erstellt)
-assets/icons/         Logo, Favicon, PWA-Icons
+css/main.css           Komplettes Designsystem
+js/config.js           ► Einstellungen: Kontakt-Endpoint, E-Mail, Buchungslink
+js/i18n.js             Sprachumschaltung DE/EN
+js/app.js              Scroll-, Reveal- und Interaktions-Engine
+js/form.js             Kontaktformular
+js/gl.js               WebGL-Hintergrund (Shader)
 
-worker/               Cloudflare Worker: Formular → Microsoft 365 (optional)
-CNAME                 certonis.com
+assets/fonts/          Inter + Space Grotesk (variable woff2, selbst gehostet)
+assets/img/            Bildwelt (mit generativer KI erstellt)
+assets/icons/          Logo, Favicon, PWA-Icons
+
+worker/                Cloudflare Worker: Formular → Microsoft 365 (optional)
+CNAME                  certonis.com
 ```
+
+## Inhalte ändern
+
+```bash
+# 1. Baustein bearbeiten, z. B. einen Preis
+nano src/sections/preise.html
+
+# 2. Seiten neu erzeugen
+node build.js
+
+# 3. Ansehen, dann committen und pushen
+python3 -m http.server 8000
+```
+
+Die erzeugten Dateien tragen oben einen Hinweis und dürfen nicht direkt
+bearbeitet werden — der nächste Build überschreibt sie. Der Deploy-Workflow
+prüft, ob Erzeugtes und `src/` zusammenpassen, und bricht sonst ab.
+
+**Neue Seite anlegen:** Baustein in `src/sections/` ablegen, in `build.js` einen
+Eintrag im Array `PAGES` ergänzen (Datei, Pfad, Titel, Description, englische
+Fassung, Bausteine) und die Navigation in `src/partials/nav.html` erweitern.
+Sitemap und Breadcrumb-Daten entstehen automatisch.
+
+**Texte:** Deutsch steht direkt im Markup, Englisch in `js/i18n.js` unter dem
+jeweiligen `data-i18n`-Schlüssel. Wird ein deutscher Text geändert, gehört der
+englische mitgepflegt. Titel und Description je Seite stehen in `build.js`.
 
 ## Lokal ansehen
 

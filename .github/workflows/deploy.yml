@@ -23,6 +23,16 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      - name: Verify generated pages are up to date
+        run: |
+          node build.js
+          if ! git diff --quiet -- '*.html' sitemap.xml; then
+            echo "::error::Die erzeugten HTML-Dateien passen nicht zu src/."
+            echo "Bitte lokal 'node build.js' ausführen und das Ergebnis committen."
+            git --no-pager diff --stat -- '*.html' sitemap.xml
+            exit 1
+          fi
+
       - name: Configure Pages
         uses: actions/configure-pages@v5
 

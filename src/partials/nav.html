@@ -1,0 +1,49 @@
+<header class="nav" id="nav">
+  <div class="nav__inner">
+    <a class="brand" href="/" aria-label="Certonis — Startseite">
+      <img class="brand__mark" src="/assets/icons/logo-mark.svg" alt="" width="34" height="34">
+      <span class="brand__word">CERTONIS</span>
+    </a>
+
+    <nav class="nav__links" aria-label="Hauptnavigation">
+      <a class="nav__link" href="/leistungen.html" data-i18n="nav.services">Leistungen</a>
+      <a class="nav__link" href="/ablauf.html" data-i18n="nav.process">Ablauf</a>
+      <a class="nav__link" href="/ki.html" data-i18n="nav.ai">Warum KI</a>
+      <a class="nav__link" href="/preise.html" data-i18n="nav.pricing">Preise</a>
+      <a class="nav__link" href="/sicherheit.html" data-i18n="nav.security">Sicherheit</a>
+      <a class="nav__link" href="/faq.html" data-i18n="nav.faq">FAQ</a>
+    </nav>
+
+    <div class="nav__actions">
+      <div class="lang-switch" role="group" aria-label="Sprache / Language">
+        <button type="button" data-lang="de" aria-pressed="true">DE</button>
+        <button type="button" data-lang="en" aria-pressed="false">EN</button>
+      </div>
+      <span class="magnetic">
+        <a class="btn btn--primary btn--sm btn--arrow" href="/kontakt.html" data-booking>
+          <span data-i18n="cta.call">Discovery Call</span>
+          <svg class="btn__arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+      </span>
+      <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Menü öffnen">
+        <span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div class="mobile-menu" id="mobile-menu">
+  <nav class="mobile-menu__links" aria-label="Mobile Navigation">
+    <a href="/leistungen.html" style="--i:0"><span data-i18n="nav.services">Leistungen</span><i>01</i></a>
+    <a href="/ablauf.html" style="--i:1"><span data-i18n="nav.process">Ablauf</span><i>02</i></a>
+    <a href="/ki.html" style="--i:2"><span data-i18n="nav.ai">Warum KI</span><i>03</i></a>
+    <a href="/preise.html" style="--i:3"><span data-i18n="nav.pricing">Preise</span><i>04</i></a>
+    <a href="/sicherheit.html" style="--i:4"><span data-i18n="nav.security">Sicherheit</span><i>05</i></a>
+    <a href="/faq.html" style="--i:5"><span data-i18n="nav.faq">FAQ</span><i>06</i></a>
+    <a href="/kontakt.html" style="--i:6"><span data-i18n="nav.contact">Kontakt</span><i>07</i></a>
+  </nav>
+  <div class="mobile-menu__foot">
+    <a href="mailto:info@certonis.com">info@certonis.com</a>
+    <span>Certonis GmbH · 4201 Eidenberg · Österreich</span>
+  </div>
+</div>

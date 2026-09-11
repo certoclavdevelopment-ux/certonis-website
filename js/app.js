@@ -232,20 +232,16 @@
   }
 
   /* --------------------------------------------------- active nav link */
-  var sections = $$("section[id]");
-  var navLinks = $$(".nav__link");
-  if (sections.length && navLinks.length && "IntersectionObserver" in window) {
-    var spy = new IntersectionObserver(function (entries) {
-      entries.forEach(function (e) {
-        if (!e.isIntersecting) return;
-        var id = e.target.id;
-        navLinks.forEach(function (l) {
-          l.classList.toggle("is-active", l.getAttribute("href") === "#" + id);
-        });
-      });
-    }, { rootMargin: "-45% 0px -50% 0px" });
-    sections.forEach(function (s) { spy.observe(s); });
-  }
+  (function markCurrentPage() {
+    var here = location.pathname.replace(/index\.html$/, "") || "/";
+    $$(".nav__link, .mobile-menu a").forEach(function (link) {
+      var target = link.getAttribute("href");
+      if (!target || target.charAt(0) !== "/") return;
+      if (target.split("#")[0] !== here) return;
+      link.classList.add("is-active");
+      link.setAttribute("aria-current", "page");
+    });
+  })();
 
   /* ------------------------------------------------------ hero rotator */
   (function rotator() {
@@ -501,15 +497,14 @@
 
   /* ---------------------------------------------------- kbd shortcut */
   doc.addEventListener("keydown", function (e) {
-    if (e.key === "k" && (e.metaKey || e.ctrlKey)) {
-      var form = doc.getElementById("kontakt");
-      if (!form) return;
-      e.preventDefault();
-      form.scrollIntoView({ behavior: reduced ? "auto" : "smooth" });
-      setTimeout(function () {
-        var first = $("#f-name");
-        if (first) first.focus({ preventScroll: true });
-      }, 700);
+    if (e.key !== "k" || !(e.metaKey || e.ctrlKey)) return;
+    e.preventDefault();
+    var first = $("#f-name");
+    if (first) {
+      first.scrollIntoView({ behavior: reduced ? "auto" : "smooth", block: "center" });
+      setTimeout(function () { first.focus({ preventScroll: true }); }, reduced ? 0 : 600);
+    } else {
+      location.href = "/kontakt.html";
     }
   });
 })();

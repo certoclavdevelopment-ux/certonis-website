@@ -15,6 +15,7 @@
     "nav.pricing": "Pricing",
     "nav.security": "Security",
     "nav.faq": "FAQ",
+    "nav.ai": "Why AI",
     "nav.contact": "Contact",
 
     "cta.call": "Discovery call",
@@ -34,6 +35,22 @@
     "hero.f2": "licence per user (Community)",
     "hero.f3": "steps in the process",
     "hero.scroll": "Scroll",
+
+    "teaser.eyebrow": "Overview",
+    "teaser.title": "An ERP project measured in weeks instead of quarters.",
+    "teaser.lead": "We broke the road to Odoo into six clear steps and handed the grunt work to AI. What that means in practice is on these pages.",
+    "teaser.more": "View",
+    "teaser.services": "Discovery, data analysis, configuration, migration, integrations, training \u2014 and the Odoo modules we set up.",
+    "teaser.process": "Six steps from the first conversation to go-live, with a realistic schedule for 4 to 20 weeks.",
+    "teaser.ai": "What the AI takes over, what people decide \u2014 and why that turns into a fraction of the usual project duration.",
+    "teaser.pricing": "Odoo Community costs \u20ac0 per user. What implementation costs is fixed after the data analysis.",
+    "teaser.security": "NDA before the first file, data processing under Art. 28 GDPR, processing inside the EU, no AI training on your data.",
+    "teaser.faq": "What does implementation cost, what happens to legacy data, where does the system run, and what if Odoo isn't the fit?",
+
+    "home.s1": "weeks to go-live",
+    "home.s2": "licence cost per user on Odoo Community",
+    "home.s3": "fewer consulting days than a classic ERP project",
+    "home.s4": "from data handover to the first analysis",
 
     "manifest.eyebrow": "The starting point",
     "manifest.text": "An ERP project rarely fails because of the software. It fails because of months of workshops, endless proposals and consultants who never learn your business. We turn that around.",
@@ -208,15 +225,15 @@
     "footer.privacy": "Privacy",
     "footer.terms": "Terms",
     "footer.contact": "Contact",
+    "footer.contactForm": "Contact form",
+    "e404.title": "This page does not exist.",
+    "e404.lead": "Maybe the address changed \u2014 or the link was never right. Here's the way on:",
+    "e404.home": "To the home page",
+
     "footer.built": "Built with Claude Code."
   };
 
   var ROTATOR_EN = ["Manufacturing", "Retail", "Services", "Trades", "Wholesale"];
-
-  var META_EN = {
-    title: "Certonis — Odoo ERP, configured by AI",
-    description: "Certonis guides your move to Odoo, the world's largest open-source ERP. Data analysis, configuration and migration by AI. Fixed price, 4–20 weeks, training included."
-  };
 
   var store = {
     get: function () {
@@ -239,6 +256,9 @@
     document.querySelectorAll("[data-i18n-ph]").forEach(function (el) {
       de["ph:" + el.dataset.i18nPh] = el.getAttribute("placeholder") || "";
     });
+    de["__title"] = document.title;
+    var md = document.querySelector('meta[name="description"]');
+    de["__description"] = md ? md.getAttribute("content") : "";
     deRotator = Array.prototype.map.call(
       document.querySelectorAll(".hero__rotator span"),
       function (s) { return s.textContent; }
@@ -269,11 +289,13 @@
     });
 
     document.documentElement.lang = en ? "en" : "de";
-    if (en) {
-      document.title = META_EN.title;
-      var d = document.querySelector('meta[name="description"]');
-      if (d) d.setAttribute("content", META_EN.description);
-    }
+
+    // every page carries its own English title and description on <body>
+    var title = en ? document.body.dataset.enTitle : de["__title"];
+    var desc = en ? document.body.dataset.enDescription : de["__description"];
+    if (title) document.title = title;
+    var metaDesc = document.querySelector('meta[name="description"]');
+    if (metaDesc && desc) metaDesc.setAttribute("content", desc);
 
     document.querySelectorAll("[data-lang]").forEach(function (b) {
       b.setAttribute("aria-pressed", b.dataset.lang === (en ? "en" : "de") ? "true" : "false");
