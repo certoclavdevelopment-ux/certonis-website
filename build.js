@@ -12,6 +12,7 @@
  */
 const fs = require("fs");
 const path = require("path");
+const crypto = require("crypto");
 
 const ROOT = __dirname;
 const SRC = path.join(ROOT, "src");
@@ -22,6 +23,55 @@ const nav = read("partials", "nav.html").trim();
 const footer = read("partials", "footer.html").trim();
 const section = (name) => read("sections", name + ".html").trim();
 const page = (name) => read("pages", name + ".html").trim();
+
+/* ---------------------------------------------------------------- Version
+   GitHub Pages liefert alles mit `Cache-Control: max-age=600` aus. Ohne
+   Kennzeichnung serviert der Browser bis zu zehn Minuten lang altes CSS zu
+   neuem HTML — im schlimmsten Fall eine kaputt aussehende Seite.
+
+   Deshalb bekommt jede CSS- und JS-Datei einen Parameter mit dem Hash ihres
+   Inhalts. Ändert sich die Datei, ändert sich die Adresse, und der Browser
+   lädt sie neu. Ändert sich nichts, bleibt sie im Cache.
+
+   Alles wird aus den Dateiinhalten abgeleitet, nie aus Datum oder Git-Stand:
+   derselbe Quellstand ergibt immer dasselbe Ergebnis, sonst würde die
+   Build-Prüfung im Deploy-Workflow anschlagen. */
+const hash = (buf) => crypto.createHash("sha256").update(buf).digest("hex");
+
+function fileHash(rel) {
+  try {
+    return hash(fs.readFileSync(path.join(ROOT, rel))).slice(0, 8);
+  } catch {
+    return null;
+  }
+}
+
+/* Build-Kennung: Hash über alle Eingaben, in stabiler Reihenfolge. */
+function buildId() {
+  const files = [];
+  const walk = (dir) => {
+    for (const entry of fs.readdirSync(dir, { withFileTypes: true }).sort((a, b) => a.name.localeCompare(b.name))) {
+      const full = path.join(dir, entry.name);
+      if (entry.isDirectory()) walk(full);
+      else files.push(full);
+    }
+  };
+  walk(SRC);
+  walk(path.join(ROOT, "css"));
+  walk(path.join(ROOT, "js"));
+  files.push(path.join(ROOT, "build.js"));
+  return hash(Buffer.concat(files.map((f) => fs.readFileSync(f)))).slice(0, 7);
+}
+
+const BUILD = buildId();
+
+/* Hängt an jede lokale CSS- und JS-Adresse den Hash ihres Inhalts. */
+function versionAssets(html) {
+  return html.replace(/(href|src)="(\/(?:css|js)\/[^"?]+\.(?:css|js))"/g, (m, attr, url) => {
+    const h = fileHash(url.slice(1));
+    return h ? `${attr}="${url}?v=${h}"` : m;
+  });
+}
 
 const PRELOADER = `<div class="preloader" aria-hidden="true">
   <div class="preloader__inner">
@@ -342,6 +392,8 @@ function render(p) {
     .replace("{{footer}}", footer)
     .replace("{{formscript}}", p.form ? '<script src="/js/form.js" defer></script>' : "");
 
+  out = versionAssets(out).replace(/\{\{build\}\}/g, BUILD);
+
   const banner =
     "<!-- Erzeugt von build.js aus src/ — nicht direkt bearbeiten. " +
     "Inhalte in src/sections/ oder src/pages/ ändern und `node build.js` laufen lassen. -->\n";
@@ -370,4 +422,4 @@ for (const p of PAGES) {
 }
 fs.writeFileSync(path.join(ROOT, "sitemap.xml"), sitemap());
 console.log("  ✓ sitemap.xml");
-console.log(`\n${count} Seiten erzeugt.`);
+console.log(`\n${count} Seiten erzeugt · Build ${BUILD}`);

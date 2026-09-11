@@ -2013,3 +2013,16 @@ html:not(.js) .hero__rotator span ~ span { display: none; }
 
 html:not(.js) .lang-switch,
 html:not(.js) .nav__toggle { display: none; }
+
+/* Build-Kennung im Footer — unauffällig, aber jederzeit ablesbar */
+.footer__build {
+  margin-left: 0.7rem;
+  padding: 0.12rem 0.5rem;
+  border: 1px solid var(--line);
+  border-radius: 100px;
+  font-family: var(--font-mono);
+  font-size: 0.66rem;
+  letter-spacing: 0.08em;
+  color: var(--text-faint);
+  white-space: nowrap;
+}

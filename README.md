@@ -74,6 +74,47 @@ Sitemap und Breadcrumb-Daten entstehen automatisch.
 jeweiligen `data-i18n`-Schlüssel. Wird ein deutscher Text geändert, gehört der
 englische mitgepflegt. Titel und Description je Seite stehen in `build.js`.
 
+## Versionierung und Caching
+
+GitHub Pages liefert **alles** mit `Cache-Control: max-age=600` aus und lässt
+sich darin nicht umkonfigurieren. Ein Browser zeigt eine Seite also bis zu zehn
+Minuten nach einem Deploy noch in der alten Fassung. Das löst sich von selbst;
+sofort sehen lässt es sich mit einem harten Neuladen:
+
+| System  | Tastenkombination |
+|---------|-------------------|
+| Windows | `Strg` + `Umschalt` + `R` |
+| macOS   | `Cmd` + `Umschalt` + `R` |
+
+Gefährlicher als altes HTML wäre eine **Mischung** aus neuem HTML und altem
+CSS. Dagegen hängt `build.js` an jede CSS- und JS-Adresse den Hash des
+Dateiinhalts:
+
+```html
+<link rel="stylesheet" href="/css/main.css?v=2cd051bc">
+```
+
+Ändert sich die Datei, ändert sich die Adresse — der Browser lädt sie neu.
+Ändert sich nichts, bleibt sie im Cache. Bilder und Schriften bleiben ohne
+Parameter, die ändern sich praktisch nie.
+
+Zusätzlich trägt jede Seite eine **Build-Kennung**: unten rechts im Footer und
+als `<meta name="build">` im Kopf. Sie ist der Hash über alle Quelldateien.
+So lässt sich in zwei Sekunden prüfen, ob der Browser die neue Fassung zeigt:
+
+```bash
+# Kennung des aktuellen Quellstands
+node build.js | tail -1
+
+# Kennung dessen, was live ausgeliefert wird
+curl -s https://certonis.com/ | grep -o 'name="build" content="[^"]*"'
+```
+
+Stimmen beide überein, ist der Deploy angekommen. Weil die Kennung aus den
+Dateiinhalten entsteht und nicht aus Datum oder Git-Stand, liefert derselbe
+Quellstand immer dasselbe Ergebnis — sonst würde die Build-Prüfung im
+Deploy-Workflow grundlos anschlagen.
+
 ## Lokal ansehen
 
 ```bash
