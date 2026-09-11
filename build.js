@@ -89,6 +89,24 @@ const ORG = {
   logo: "https://certonis.com/assets/icons/icon-512.png",
   image: "https://certonis.com/assets/img/og.jpg",
   email: "info@certonis.com",
+  telephone: "+43 732 674 278 22",
+  contactPoint: [
+    {
+      "@type": "ContactPoint",
+      telephone: "+43 732 674 278 22",
+      email: "info@certonis.com",
+      contactType: "sales",
+      areaServed: "AT",
+      availableLanguage: ["de", "en"]
+    },
+    {
+      "@type": "ContactPoint",
+      telephone: "+49 545 263 499 30",
+      contactType: "sales",
+      areaServed: ["DE", "CH", "LI", "LU"],
+      availableLanguage: ["de", "en"]
+    }
+  ],
   description:
     "Certonis begleitet Unternehmen beim Umstieg auf das Open-Source-ERP Odoo. Datenanalyse, Einrichtung und Migration durch KI.",
   address: {

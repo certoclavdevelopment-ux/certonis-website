@@ -1391,8 +1391,11 @@ body.menu-open .mobile-menu__links a {
 
 .contact-aside li svg { width: 20px; height: 20px; color: var(--cyan); flex-shrink: 0; margin-top: 0.2rem; }
 
-.contact-aside strong { display: block; font-weight: 500; margin-bottom: 0.15rem; }
-.contact-aside span { color: var(--text-dim); font-size: 0.92rem; }
+/* Nur die Einträge der Kontaktliste ansprechen. Ohne das `li` trifft die
+   Regel auch die Spans, die das Skript in die Überschrift hineinbaut, und
+   staucht sie auf Fließtextgröße. */
+.contact-aside li strong { display: block; font-weight: 500; margin-bottom: 0.15rem; }
+.contact-aside li span { color: var(--text-dim); font-size: 0.92rem; }
 
 .form {
   padding: clamp(1.5rem, 3vw, 2.5rem);
@@ -2025,4 +2028,33 @@ html:not(.js) .nav__toggle { display: none; }
   letter-spacing: 0.08em;
   color: var(--text-faint);
   white-space: nowrap;
+}
+
+/* Telefonnummern auf der Kontaktseite: Land links, Nummer rechts */
+.contact-phones {
+  display: grid;
+  gap: 0.3rem;
+  margin-top: 0.15rem;
+}
+
+.contact-phones a {
+  display: flex;
+  align-items: baseline;
+  gap: 0.7rem;
+  color: var(--text);
+  font-variant-numeric: tabular-nums;
+  transition: color var(--t-fast);
+  width: fit-content;
+}
+
+.contact-phones a:hover { color: var(--cyan); }
+
+.contact-phones i {
+  flex-shrink: 0;
+  min-width: 4.6em;
+  font-family: var(--font-mono);
+  font-style: normal;
+  font-size: 0.62rem;
+  letter-spacing: 0.1em;
+  color: var(--text-faint);
 }

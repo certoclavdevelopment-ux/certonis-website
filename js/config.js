@@ -20,13 +20,14 @@ window.CERTONIS_CONFIG = {
 
   /* Contact details used across the page and in the mailto fallback. */
   email: "info@certonis.com",
-  phone: "",
+  phone: "+43 732 674 278 22",
+  phoneIntl: "+49 545 263 499 30",
   company: "Certonis GmbH",
 
   /* Where visitors land after a successful submit. Empty = stay on page. */
   successRedirect: "",
 
   /* Booking link for the discovery call (Calendly, Cal.com, MS Bookings …).
-     Empty = the "Termin buchen" buttons scroll to the contact form instead. */
-  bookingUrl: ""
+     Empty = the "Discovery Call" buttons lead to the contact form instead. */
+  bookingUrl: "https://calendly.com/michael-dirix"
 };

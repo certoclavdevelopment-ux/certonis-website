@@ -492,6 +492,20 @@
     });
   });
 
+  /* ---------------------------------------------------------- booking
+     The scheduler link lives in config.js. It has to be applied here rather
+     than in form.js, because the "Discovery Call" buttons sit in the nav on
+     every page while form.js only loads on the contact page. */
+  (function booking() {
+    var cfg = window.CERTONIS_CONFIG || {};
+    if (!cfg.bookingUrl) return;
+    $$("[data-booking]").forEach(function (el) {
+      el.setAttribute("href", cfg.bookingUrl);
+      el.setAttribute("target", "_blank");
+      el.setAttribute("rel", "noopener");
+    });
+  })();
+
   /* ------------------------------------------------------------- year */
   $$("[data-year]").forEach(function (el) { el.textContent = new Date().getFullYear(); });
 

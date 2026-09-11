@@ -174,13 +174,4 @@
         submit.disabled = false;
       });
   });
-
-  /* Booking buttons: use the configured scheduler when there is one. */
-  if (cfg.bookingUrl) {
-    document.querySelectorAll('[data-booking]').forEach(function (el) {
-      el.setAttribute("href", cfg.bookingUrl);
-      el.setAttribute("target", "_blank");
-      el.setAttribute("rel", "noopener");
-    });
-  }
 })();
