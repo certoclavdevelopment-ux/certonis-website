@@ -56,11 +56,16 @@ löschen (z. B. Parking-Seiten des Registrars).
 | AAAA  | `@`         | `2606:50c0:8001::153` | 3600 |
 | AAAA  | `@`         | `2606:50c0:8002::153` | 3600 |
 | AAAA  | `@`         | `2606:50c0:8003::153` | 3600 |
-| CNAME | `www`       | `certoclavdevelopment-ux.github.io.` | 3600 |
+| CNAME | `www`       | `certoclavdevelopment-ux.github.io` | 3600 |
 
 Der CNAME-Wert ist der GitHub-Account, unter dem dieses Repository liegt
 (`certoclavdevelopment-ux`) — **nicht** der Repository-Name. Wechselt der
 Account, muss dieser Eintrag mitwandern.
+
+Manche Oberflächen zeigen den Wert mit Punkt am Ende
+(`certoclavdevelopment-ux.github.io.`). Das ist dieselbe Angabe: der Punkt
+markiert in der DNS-Schreibweise einen absoluten Namen. Bei IONOS wird er
+automatisch ergänzt, dort genügt die Eingabe ohne Punkt.
 
 E-Mail für info@certonis.com läuft unabhängig davon über die MX-Einträge von
 Microsoft 365. Diese bleiben unverändert; GitHub Pages betrifft nur A, AAAA und
