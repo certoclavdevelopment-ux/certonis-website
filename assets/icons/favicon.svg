@@ -1,17 +1,17 @@
+<!-- Vereinfachte Bildmarke für kleine Größen (Suchergebnis, Tab, Lesezeichen).
+     Der Ring der großen Marke löst sich unter 24 px in Rauschen auf, deshalb
+     hier ein einzelner kräftiger Bogen mit Kern. Der helle Rand hält die
+     Kachel auch auf dunklem Untergrund sichtbar. -->
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="none">
   <defs>
-    <linearGradient id="cg" x1="6" y1="42" x2="42" y2="6" gradientUnits="userSpaceOnUse">
-      <stop offset="0" stop-color="#6C4BF6"/>
-      <stop offset="0.55" stop-color="#8B5CF6"/>
+    <linearGradient id="cg" x1="8" y1="40" x2="40" y2="8" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#7C5CFF"/>
+      <stop offset="0.55" stop-color="#A78BFA"/>
       <stop offset="1" stop-color="#22E3D2"/>
     </linearGradient>
   </defs>
   <rect width="48" height="48" rx="11" fill="#05060B"/>
-  <g transform="translate(24 24) scale(0.8) translate(-24 -24)">
-    <path d="M37.435 10.565 A19 19 0 1 0 37.435 37.435" stroke="url(#cg)" stroke-width="5"
-          stroke-dasharray="27 4.4 21 4.4 16 4.4 12.34" stroke-linecap="butt"/>
-    <path d="M31.07 16.93 A10 10 0 1 0 31.07 31.07" stroke="url(#cg)" stroke-width="5"
-          stroke-dasharray="16 4.4 12 4.4 10.32" stroke-linecap="butt" opacity="0.82"/>
-    <rect x="21.2" y="21.2" width="5.6" height="5.6" rx="1.3" fill="#22E3D2"/>
-  </g>
+  <rect x="0.9" y="0.9" width="46.2" height="46.2" rx="10.2" stroke="#FFFFFF33" stroke-width="1.8"/>
+  <path d="M34.6 13.4A15 15 0 1 0 34.6 34.6" stroke="url(#cg)" stroke-width="7" stroke-linecap="round"/>
+  <circle cx="24" cy="24" r="3.4" fill="#22E3D2"/>
 </svg>
