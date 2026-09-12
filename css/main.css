@@ -164,6 +164,19 @@ p { text-wrap: pretty; }
 
 .accent { color: var(--cyan); }
 
+/* Bei `background-clip: text` wird der Buchstabe mit dem Hintergrund des
+   Elements gefüllt. Diese Farbfläche endet an der Zeilenbox — die Unterlänge
+   von g, y und j ragt darunter hinaus und bliebe ungefärbt, sähe also
+   abgeschnitten aus. Das Polster vergrößert die Fläche nach unten, der
+   negative Außenabstand nimmt es fürs Layout wieder zurück. */
+.gradient-text,
+.fact__value,
+.flow__step.is-active .flow__step-index,
+.error-page__code {
+  padding-bottom: 0.28em;
+  margin-bottom: -0.28em;
+}
+
 .mono {
   font-family: var(--font-mono);
   font-size: var(--fs-micro);
@@ -1270,11 +1283,12 @@ body.menu-open .mobile-menu__links a {
 .stat:hover { background: #0d1020; }
 
 .stat__value {
+  padding-bottom: 0.28em;
+  margin-bottom: calc(0.6rem - 0.28em);
   font-family: var(--font-display);
   font-size: clamp(1.9rem, 3.4vw, 3rem);
   line-height: 1;
   letter-spacing: -0.04em;
-  margin-bottom: 0.6rem;
 }
 
 .stat__label { font-size: 0.85rem; color: var(--text-faint); }
