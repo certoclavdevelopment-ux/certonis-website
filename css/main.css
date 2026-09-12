@@ -685,6 +685,7 @@ body.menu-open .mobile-menu__links a {
 }
 
 .hero__title {
+  margin-bottom: 0.18em;
   font-size: var(--fs-hero);
   font-weight: 500;
   line-height: 1.0;
@@ -1626,8 +1627,8 @@ body.menu-open .mobile-menu__links a {
 .reveal-mask {
   display: block;
   overflow: hidden;
-  padding-bottom: 0.26em;
-  margin-bottom: -0.26em;
+  padding-bottom: 0.42em;
+  margin-bottom: -0.42em;
 }
 
 .reveal-mask > * {
@@ -1643,8 +1644,8 @@ body.menu-open .mobile-menu__links a {
   display: block;
   overflow: hidden;
   /* the mask has to sit below the baseline or descenders get sliced off */
-  padding-bottom: 0.26em;
-  margin-bottom: -0.26em;
+  padding-bottom: 0.42em;
+  margin-bottom: -0.42em;
 }
 
 .split-line > span {
@@ -1874,6 +1875,7 @@ html.js body:not(.is-loaded) .hero .reveal {
     transform: none !important;
   }
   .clip-in { clip-path: none !important; }
+  .split-line, .reveal-mask { overflow: visible !important; }
   .grain, #gl-canvas, .scanline-overlay { display: none; }
   .marquee__track { animation: none; }
   .preloader { display: none; }
@@ -2006,6 +2008,8 @@ html:not(.js) .split-line > span {
 }
 
 html:not(.js) .clip-in { clip-path: none; }
+html:not(.js) .split-line,
+html:not(.js) .reveal-mask { overflow: visible; }
 html:not(.js) .gantt__bar { transform: scaleX(1); }
 html:not(.js) .compare__fill { width: var(--w); }
 html:not(.js) .manifest .word { color: var(--text); }

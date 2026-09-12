@@ -131,7 +131,10 @@
   window.certonis.resplit = function () {
     splitTargets.forEach(function (el) { delete el.dataset.origHtml; });
     runSplit();
-    splitTargets.forEach(function (el) { el.classList.add("is-inview"); });
+    splitTargets.forEach(function (el) {
+      el.classList.add("is-inview");
+      setTimeout(function () { window.certonis.unmask(el); }, 1400);
+    });
   };
 
   if (splitTargets.length) {
@@ -145,7 +148,9 @@
       splitTimer = setTimeout(function () {
         runSplit();
         splitTargets.forEach(function (el) {
-          if (el.getBoundingClientRect().top < window.innerHeight) el.classList.add("is-inview");
+          if (el.getBoundingClientRect().top > window.innerHeight) return;
+          el.classList.add("is-inview");
+          setTimeout(function () { window.certonis.unmask(el); }, 1400);
         });
       }, 220);
     }, { passive: true });
@@ -154,9 +159,30 @@
   /* ------------------------------------------------------------- reveals */
   var revealSel = ".reveal, .reveal-mask, .clip-in, .scale-in, [data-split], [data-inview]";
 
+  /* Die Maske schneidet die Zeile ab, damit der Text von unten hereinfahren
+     kann. Gebraucht wird sie nur währenddessen. Bleibt sie danach bestehen,
+     kappt sie je nach Schrift und Größe die Unterlängen von g, y und j.
+     Also: nach der Animation abschalten — dann kann dort nichts mehr
+     abgeschnitten werden, unabhängig von der gewählten Schrift. */
+  var MASK_OFF_AFTER = 2200;
+
+  function unmask(el) {
+    var boxes = $$(".split-line, .reveal-mask", el);
+    if (el.matches && el.matches(".split-line, .reveal-mask")) boxes.push(el);
+    boxes.forEach(function (b) { b.style.overflow = "visible"; });
+  }
+
+  function markInview(el) {
+    el.classList.add("is-inview");
+    setTimeout(function () { unmask(el); }, MASK_OFF_AFTER);
+  }
+
+  window.certonis = window.certonis || {};
+  window.certonis.unmask = unmask;
+
   function revealAll() {
     $$(revealSel).forEach(function (el) {
-      if (el.getBoundingClientRect().top < window.innerHeight * 0.92) el.classList.add("is-inview");
+      if (el.getBoundingClientRect().top < window.innerHeight * 0.92) markInview(el);
     });
   }
 
@@ -164,13 +190,16 @@
     var io = new IntersectionObserver(function (entries) {
       entries.forEach(function (e) {
         if (!e.isIntersecting) return;
-        e.target.classList.add("is-inview");
+        markInview(e.target);
         io.unobserve(e.target);
       });
     }, { rootMargin: "0px 0px -10% 0px", threshold: 0.08 });
     $$(revealSel).forEach(function (el) { io.observe(el); });
   } else {
-    $$(revealSel).forEach(function (el) { el.classList.add("is-inview"); });
+    $$(revealSel).forEach(function (el) {
+      el.classList.add("is-inview");
+      unmask(el);
+    });
   }
 
   /* ------------------------------------------------------- scroll state */
