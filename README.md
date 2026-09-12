@@ -40,7 +40,7 @@ js/app.js              Scroll-, Reveal- und Interaktions-Engine
 js/form.js             Kontaktformular
 js/gl.js               WebGL-Hintergrund (Shader)
 
-assets/fonts/          Inter + Space Grotesk (variable woff2, selbst gehostet)
+assets/fonts/          Inter + Sora (variable woff2, selbst gehostet)
 assets/img/            Bildwelt (mit generativer KI erstellt)
 assets/icons/          Logo, Favicon, PWA-Icons
 
