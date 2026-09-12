@@ -206,7 +206,7 @@ const PAGES = [
     titleEn: "Certonis — Odoo ERP, configured by AI",
     descriptionEn:
       "Certonis guides your move to Odoo, the world's largest open-source ERP. Data analysis, configuration and migration by AI. Fixed price, 4–20 weeks, training included.",
-    sections: ["hero", "marquee", "bordcomputer", "teasers", "cta"],
+    sections: ["hero", "marquee", "bordcomputer", "gewinn", "teasers", "cta"],
     promoteHeading: false,
     extraSchema: [SERVICE, WEBSITE]
   },
