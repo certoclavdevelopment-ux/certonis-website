@@ -1373,6 +1373,98 @@ body.menu-open .mobile-menu__links a {
 .manifest .word.is-lit { color: var(--text); }
 .manifest .word.is-key.is-lit { color: var(--cyan); }
 
+/* Bordcomputer — die Vorstellung links, das Schiffstagebuch rechts */
+.bridge {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: clamp(2rem, 5vw, 5rem);
+  align-items: start;
+}
+
+.bridge__intro { position: sticky; top: 7rem; }
+.bridge__intro h2 { margin-bottom: 1.4rem; max-width: 14ch; }
+.bridge__intro .lead { max-width: 34ch; }
+
+@media (max-width: 900px) {
+  .bridge { grid-template-columns: 1fr; }
+  .bridge__intro { position: static; }
+  .bridge__intro h2, .bridge__intro .lead { max-width: none; }
+}
+
+.log {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+.log::before {
+  content: "";
+  position: absolute;
+  inset-block: 0.9rem;
+  left: calc(4.6rem - 1px);
+  width: 1px;
+  background: linear-gradient(180deg, transparent, var(--violet-soft) 12%, var(--cyan) 88%, transparent);
+  opacity: 0.5;
+}
+
+.log__row {
+  display: grid;
+  grid-template-columns: 4.6rem 1fr;
+  align-items: baseline;
+  gap: 0 1.6rem;
+  padding-block: 0.9rem;
+}
+
+.log__row + .log__row { border-top: 1px solid var(--line); }
+
+.log__time {
+  color: var(--cyan);
+  letter-spacing: 0.1em;
+  position: relative;
+}
+
+.log__time::after {
+  content: "";
+  position: absolute;
+  right: -3px;
+  top: 0.38em;
+  width: 7px; height: 7px;
+  border-radius: 50%;
+  background: var(--cyan);
+  box-shadow: 0 0 0 4px #22e3d21f;
+}
+
+.log__text {
+  color: var(--text-dim);
+  font-size: 1.02rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.log__kicker {
+  margin-top: clamp(2rem, 4vw, 3rem);
+  padding-left: calc(4.6rem + 1.6rem);
+}
+
+.log__kicker p { color: var(--text-dim); }
+
+.log__wink {
+  margin-top: 1rem;
+  font-family: var(--font-display);
+  font-size: clamp(1.05rem, 1.7vw, 1.35rem);
+  line-height: 1.35;
+  letter-spacing: -0.02em;
+  color: var(--text);
+}
+
+@media (max-width: 640px) {
+  .log::before { display: none; }
+  .log__row { grid-template-columns: 1fr; gap: 0.4rem; }
+  .log__time::after { display: none; }
+  .log__kicker { padding-left: 0; }
+}
+
 /* CTA band */
 .cta-band {
   position: relative;

@@ -36,6 +36,17 @@
     "hero.f3": "steps in the process",
     "hero.scroll": "Scroll",
 
+    "bc.eyebrow": "A Tuesday after go-live",
+    "bc.title": "\u201cComputer \u2014 add the customer.\u201d",
+    "bc.lead": "In the starship shows somebody says one sentence into the room and the ship does the rest. Nobody types in addresses up there. That is where we are taking your back office: Odoo is the bridge, Claude Code builds it.",
+    "bc.l1": "A new customer calls. By the time you hang up the record exists \u2014 address, VAT ID checked, payment terms, contact person.",
+    "bc.l2": "The quote turns into an order. Delivery note, stock move and invoice follow in one go \u2014 with the tax rate of the right country.",
+    "bc.l3": "A supplier invoice arrives by email. It is read, coded, matched to the purchase order and put up for approval \u2014 already checked against the delivery note.",
+    "bc.l4": "Month-end close. The entries are through; what remains are the few cases somebody genuinely has to look at \u2014 the only pile that still needs a face.",
+    "bc.l5": "End of day. Dunning runs, consolidated invoices and reports keep going with nobody watching.",
+    "bc.kicker": "None of this is science fiction. It is Odoo \u2014 cleanly configured, fitted to how you actually work, and equipped with the automations nobody usually builds because they are the first thing to fall out of a classic project\u2019s budget. That groundwork is what Claude Code takes over here: the same implementation a consulting team schedules in quarters, done in four to twenty weeks.",
+    "bc.wink": "Saying the sentence out loud is, for now, still your job.",
+
     "teaser.eyebrow": "Overview",
     "teaser.title": "An ERP project measured in weeks instead of quarters.",
     "teaser.lead": "We broke the road to Odoo into six clear steps and handed the grunt work to AI. What that means in practice is on these pages.",
