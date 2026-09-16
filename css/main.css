@@ -1835,7 +1835,9 @@ body.menu-open .mobile-menu__links a {
 .preloader {
   position: fixed;
   inset: 0;
-  z-index: 200;
+  /* Über allem, auch über dem Chat-Widget (999999) — sonst schwebt dessen
+     Sprechblase schon während der Einblendung über der schwarzen Fläche. */
+  z-index: 1000000;
   background: var(--ink);
   display: grid;
   place-items: center;

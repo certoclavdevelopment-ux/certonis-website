@@ -61,5 +61,17 @@
 <script src="/js/app.js" defer></script>
 {{formscript}}
 <script src="/js/gl.js" defer></script>
+
+<!-- Chat-Widget (eigenes Backend). Die Sprache liest es einmal beim Start aus
+     window.CertoChat; hier bekommt es die, für die sich der Besucher auf der
+     Seite entschieden hat — sonst richtet es sich nach dem Browser. -->
+<script>
+  (function () {
+    var l = "de";
+    try { if (localStorage.getItem("certonis-lang") === "en") l = "en"; } catch (e) { /* privater Modus */ }
+    window.CertoChat = { language: l };
+  })();
+</script>
+<script src="https://certochat-certonis-cc339189ed42.herokuapp.com/widget.js" defer></script>
 </body>
 </html>
