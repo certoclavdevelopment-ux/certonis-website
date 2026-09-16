@@ -69,7 +69,7 @@
   (function () {
     var l = "de";
     try { if (localStorage.getItem("certonis-lang") === "en") l = "en"; } catch (e) { /* privater Modus */ }
-    window.CertoChat = { language: l };
+    window.CertoChat = { language: l, position: "left" };
   })();
 </script>
 <script src="https://certochat-certonis-cc339189ed42.herokuapp.com/widget.js" defer></script>

@@ -771,7 +771,9 @@ body.menu-open .mobile-menu__links a {
 
 .hero__scroll {
   position: absolute;
-  left: var(--gutter);
+  /* Unten links sitzt der Chat-Knopf (fixiert, 60 px). Der Hinweis rückt
+     daran vorbei, statt sich mit ihm zu überlagern. */
+  left: calc(var(--gutter) + 5.2rem);
   bottom: 1.8rem;
   display: flex;
   align-items: center;
