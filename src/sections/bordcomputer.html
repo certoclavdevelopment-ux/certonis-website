@@ -3,38 +3,72 @@
   <div class="shell">
     <div class="bridge">
       <div class="bridge__intro">
-        <span class="eyebrow reveal" data-i18n="bc.eyebrow">Ein Dienstag nach dem Go-live</span>
-        <h2 data-split data-i18n="bc.title">&bdquo;Computer &mdash; leg den Kunden an.&ldquo;</h2>
-        <p class="lead reveal" style="--d:180ms;" data-i18n="bc.lead">In den Raumschiff-Serien sagt jemand einen Satz in den Raum, und das Schiff erledigt den Rest. Niemand tippt dort Adressen ab. Genau dorthin bringen wir Ihr Backoffice: Odoo ist die Brücke, Claude Code richtet sie ein.</p>
+        <span class="eyebrow reveal" data-i18n="bc.eyebrow">Die neue Arbeitsteilung</span>
+        <h2 data-split data-i18n="bc.title">Erst baut die KI Ihr ERP. Dann bedient sie es.</h2>
+        <p class="lead reveal" style="--d:180ms;" data-i18n="bc.lead">Das ist der Unterschied zu jedem anderen ERP-Projekt: Am Ende bekommen Sie nicht ein leeres System und ein Handbuch. Die KI, die Ihre Prozesse aufgebaut hat, bleibt darin — und übernimmt danach die Arbeit, die Ihre Leute heute abtippen.</p>
+
+        <ol class="phases reveal" style="--d:260ms;">
+          <li class="phase">
+            <span class="phase__num mono">01</span>
+            <div>
+              <h3 class="phase__title" data-i18n="bc.p1t">Aufbau — 4 bis 20 Wochen</h3>
+              <p data-i18n="bc.p1d">Claude Code nimmt Ihre Abläufe auf, migriert die Altdaten und konfiguriert Odoo. Dieselbe Arbeit, für die ein Beraterteam Quartale ansetzt.</p>
+            </div>
+          </li>
+          <li class="phase">
+            <span class="phase__num mono">02</span>
+            <div>
+              <h3 class="phase__title" data-i18n="bc.p2t">Betrieb — ab dem Go-live, dauerhaft</h3>
+              <p data-i18n="bc.p2d">Die KI bleibt im fertigen System und arbeitet darin: anlegen, prüfen, buchen, auswerten. Ihre Leute entscheiden nur noch das, was nicht eindeutig ist.</p>
+            </div>
+          </li>
+        </ol>
       </div>
 
       <div class="bridge__log">
-        <ol class="log reveal">
+        <p class="log__caption mono reveal" data-i18n="bc.caption">Ein Dienstag, ein halbes Jahr nach dem Go-live</p>
+
+        <ol class="log reveal" style="--d:80ms;">
           <li class="log__row">
             <span class="log__time mono">08:12</span>
-            <p class="log__text" data-i18n="bc.l1">Ein neuer Kunde ruft an. Bis Sie auflegen, steht der Datensatz — Anschrift, UID geprüft, Zahlungsziel, Ansprechpartner.</p>
+            <div>
+              <p class="log__text" data-i18n="bc.l1">Ein neuer Kunde ruft an. Bis Sie auflegen, steht der Datensatz — Anschrift, UID geprüft, Zahlungsziel, Ansprechpartner.</p>
+              <span class="log__actor" data-i18n="bc.a1">KI erledigt das</span>
+            </div>
           </li>
           <li class="log__row">
             <span class="log__time mono">10:47</span>
-            <p class="log__text" data-i18n="bc.l2">Aus dem Angebot wird ein Auftrag. Lieferschein, Lagerbuchung und Rechnung entstehen in einem Zug — mit dem Steuersatz des richtigen Landes.</p>
+            <div>
+              <p class="log__text" data-i18n="bc.l2">Aus dem Angebot wird ein Auftrag. Lieferschein, Lagerbuchung und Rechnung entstehen in einem Zug — mit dem Steuersatz des richtigen Landes.</p>
+              <span class="log__actor" data-i18n="bc.a2">KI erledigt das</span>
+            </div>
           </li>
           <li class="log__row">
             <span class="log__time mono">13:05</span>
-            <p class="log__text" data-i18n="bc.l3">Eine Lieferantenrechnung kommt per Mail. Sie wird gelesen, kontiert, der Bestellung zugeordnet und zur Freigabe vorgelegt. Gegen den Lieferschein geprüft ist sie da schon.</p>
+            <div>
+              <p class="log__text" data-i18n="bc.l3">Eine Lieferantenrechnung kommt per Mail. Sie wird gelesen, kontiert, gegen den Lieferschein geprüft, der Bestellung zugeordnet — und Ihnen zur Freigabe vorgelegt.</p>
+              <span class="log__actor log__actor--human" data-i18n="bc.a3">Ein Klick von Ihnen</span>
+            </div>
           </li>
           <li class="log__row">
             <span class="log__time mono">16:30</span>
-            <p class="log__text" data-i18n="bc.l4">Monatsabschluss. Die Buchungen sind durch, übrig bleiben die paar Fälle, die wirklich jemand ansehen muss — der einzige Stapel, der noch ein Gesicht braucht.</p>
+            <div>
+              <p class="log__text" data-i18n="bc.l4">Monatsabschluss. Die Buchungen sind durch, übrig bleiben die paar Fälle, die wirklich jemand ansehen muss — der einzige Stapel, der noch ein Gesicht braucht.</p>
+              <span class="log__actor log__actor--human" data-i18n="bc.a4">Sie entscheiden</span>
+            </div>
           </li>
           <li class="log__row">
             <span class="log__time mono">18:00</span>
-            <p class="log__text" data-i18n="bc.l5">Feierabend. Mahnlauf, Sammelrechnungen und Auswertungen laufen weiter, ohne dass jemand zusieht.</p>
+            <div>
+              <p class="log__text" data-i18n="bc.l5">Feierabend. Mahnlauf, Sammelrechnungen und Auswertungen laufen weiter, ohne dass jemand zusieht.</p>
+              <span class="log__actor" data-i18n="bc.a5">KI erledigt das</span>
+            </div>
           </li>
         </ol>
 
         <div class="log__kicker reveal" style="--d:140ms;">
-          <p data-i18n="bc.kicker">Nichts davon ist Science-Fiction. Es ist Odoo — sauber konfiguriert, an Ihre Abläufe angepasst und mit den Automatisierungen versehen, die sonst niemand einbaut, weil sie in klassischen Projekten als Erstes aus dem Budget fallen. Genau diese Fleißarbeit übernimmt bei uns Claude Code: dieselbe Einrichtung, für die ein Beraterteam Quartale ansetzt, in vier bis zwanzig Wochen.</p>
-          <p class="log__wink" data-i18n="bc.wink">Den Satz in den Raum sprechen müssen Sie vorerst noch selbst.</p>
+          <p data-i18n="bc.kicker">So sieht Arbeit aus, wenn die KI das System nicht nur schreibt, sondern darin bleibt: Niemand erfasst mehr Daten, niemand sucht mehr Belege zusammen. Ihre Leute entscheiden über die Ausnahmen — und das sind an einem normalen Tag eine Handvoll. Aus dem Backoffice wird ein Kontrollraum, besetzt mit denselben Menschen, die vorher Formulare ausgefüllt haben.</p>
+          <p class="log__wink" data-i18n="bc.wink">Den Bordcomputer aus den Raumschiff-Serien müssen Sie vorerst noch selbst ansprechen. Und den Kaffee holt er auch nicht. Alles andere steht zur Debatte.</p>
         </div>
       </div>
     </div>

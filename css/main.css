@@ -1393,6 +1393,48 @@ body.menu-open .mobile-menu__links a {
   .bridge__intro h2, .bridge__intro .lead { max-width: none; }
 }
 
+/* Die zwei Phasen — was die KI baut und was sie danach tut */
+.phases {
+  list-style: none;
+  margin: 2.5rem 0 0;
+  padding: 0;
+  display: grid;
+  gap: 1.4rem;
+  max-width: 34ch;
+}
+
+.phase {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0 1rem;
+  padding-top: 1.4rem;
+  border-top: 1px solid var(--line);
+}
+
+.phase__num {
+  color: var(--violet-soft);
+  letter-spacing: 0.16em;
+}
+
+.phase__title {
+  font-size: 1.02rem;
+  line-height: 1.3;
+  letter-spacing: -0.01em;
+  margin-bottom: 0.4rem;
+}
+
+.phase p {
+  color: var(--text-dim);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.log__caption {
+  color: var(--text-faint);
+  margin-bottom: 1.2rem;
+}
+
 .log {
   list-style: none;
   margin: 0;
@@ -1413,7 +1455,7 @@ body.menu-open .mobile-menu__links a {
 .log__row {
   display: grid;
   grid-template-columns: 4.6rem 1fr;
-  align-items: baseline;
+  align-items: start;
   gap: 0 1.6rem;
   padding-block: 0.9rem;
 }
@@ -1442,6 +1484,26 @@ body.menu-open .mobile-menu__links a {
   font-size: 1.02rem;
   line-height: 1.6;
   margin: 0;
+}
+
+.log__actor {
+  display: inline-block;
+  margin-top: 0.5rem;
+  font-family: var(--font-mono);
+  font-size: 0.66rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--cyan);
+  border: 1px solid #22e3d233;
+  border-radius: 999px;
+  padding: 0.22rem 0.6rem;
+}
+
+/* Die Zeilen, in denen ein Mensch gefragt ist — bewusst anders eingefärbt,
+   damit auf einen Blick zu sehen ist, wie wenige das sind. */
+.log__actor--human {
+  color: var(--violet-soft);
+  border-color: #a78bfa3d;
 }
 
 .log__kicker {
