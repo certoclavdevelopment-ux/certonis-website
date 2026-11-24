@@ -118,7 +118,8 @@ const ORG = {
   },
   founder: { "@type": "Person", name: "Michael Simon" },
   foundingDate: "2026-01-26",
-  identifier: "FN 674951 a"
+  identifier: "FN 674951 a",
+  vatID: "ATU83944902"
 };
 
 const SERVICE = {
